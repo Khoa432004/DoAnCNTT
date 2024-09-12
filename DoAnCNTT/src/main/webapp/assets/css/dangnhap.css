@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------Header----------*/
+#header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ 
+ }
+ 
+ #header .container {
+    width: 1260px;
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    align-items: center;
+    font-size: 14px;
+ }
+ 
+ .header-left a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+ }
+ .header-left sup{
+    font-size: 14px;
+    font-style: italic;
+
+ }
+
+
+ .reg-button{
+    padding: 4px 15px;
+    border: 1px solid white;
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+ }
+ 
+ .log-button{
+    padding: 4px 15px;
+    color: #1F4456;
+    background-color:white ;
+    border: 1px solid white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+ }
+ 
+ .reg-button:hover{
+    color: #1F4456;
+    background-color:white ;
+    border: 1px solid #1F4456;
+ }
+
+
+ul{
+    display: flex;
+    justify-content: center;
+}
+
+li{
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+/*content*/ 
+
+.main-content{
+    width: 380px;
+}
+
+.main-content h5{
+    font-weight: 700;
+}
+
+
+
+.form .btn{
+    width: 360px;
+    font-weight: 600;
+    background-color:rgb(33, 114, 155) ; 
+    color: white; 
+    height: 50px;
+    padding-top: 10px;
+}
+
+.form .btn:hover{
+    background-color: rgb(41, 155, 212);
+    color: white; 
+
+}
+
+
+.plasform{
+    border-bottom: 1px solid rgb(176, 176, 176);
+    display: flex;
+    justify-content: center;
+}
+
+.plasform ul li {
+    padding:  30px 10px;
+}
+
+.plasform ul{
+    display: flex;
+    padding: #1F4456;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.plasform ul li a{
+    text-decoration: none;
+    color: #144cab;
+    background-color: white;
+    padding:  20px 25px;
+    border: 1px solid #d5d8dd ;
+    border-radius: 5px;
+    
+}
+
+.plasform ul li a:hover{
+    border: 1px solid #1F4456 ;
+}
+
+
+.plasform ul li a .ti-facebook{
+    font-size: 20px;
+}
+
+.plasform ul li a .ti-google{
+    font-size: 20px;
+}
+
+.plasform ul li a .ti-apple{
+    font-size: 20px;
+  
+}
+
+
+.text-sub-2 p{
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
