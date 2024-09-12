@@ -192,3 +192,68 @@
     </div>
     <script src="assets/javaScript/diemden.js"></script>
 </body>
+
+<footer>
+    <div class="coop"
+        style="display: flex; flex-direction: column; text-align: center;padding: 20px;margin-top: 100px;">
+        <p style="color: #6b6b6b; font-size: 12px;margin-top: 30px;">Các nhãn hàng đã hợp tác</p>
+        <div class="hoptac">
+            <img src="assets/img/coop.png" alt="">
+        </div>
+    </div>
+    <div class="info" style="background-color: rgb(52, 58, 64); padding: 20px;">
+        <div class=" info-1" style="display: flex; justify-content: space-around;">
+            <div class="info-1-1">
+                <h3 style="color: white;">Liên Hệ</h3>
+                <p style="font-weight: 200;color: white;">
+                    ✉
+                    <a href="mailto:khoavt123456789@gmail.com" target="_blank">khoavt123456789@gmail.com</a>
+                    <br>
+                    ✉
+                    <a href="mailto:khoavt123456789@gmail.com" target="_blank">khoavt123456789@gmail.com</a>
+                </p>
+            </div>
+            <div class="info-1-2">
+                <h3 style="color: white;">Chi nhánh</h3>
+                <p style="font-weight: 200;color: white;">
+
+                    Địa chỉ 1: Số 123 Đường 1, Quận 1, Tp. Hồ Chí Minh
+                    <br>
+                    Địa chỉ 2: Số 456 Đường 2, Quận 2, Tp. Hồ Chí Minh
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="copyright" style="
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(52, 58, 64);padding: 10px;">
+        <p style="color: white;">Bản quyền © 2024 Trang Đặt Khách Sạn. Tất cả các quyền đã được bảo lưu.</p>
+    </div>
+
+</footer>
+
+<script>
+    var destinationElement = document.getElementById("destination");
+    var tooltipElement = document.getElementById("tooltiptext");
+
+    destinationElement.addEventListener("focus", function () {
+        tooltipElement.style.opacity = 1;
+        setTimeout(function () {
+            tooltipElement.style.display = "block";
+        }, 300);
+
+    });
+
+    destinationElement.addEventListener("blur", function () {
+        tooltipElement.style.opacity = 0;
+        setTimeout(function () {
+            tooltipElement.style.display = "none";
+        }, 300);
+    });
+</script>
+<script src="assets/javaScript/trangchu.js"></script>
+
+</html>
