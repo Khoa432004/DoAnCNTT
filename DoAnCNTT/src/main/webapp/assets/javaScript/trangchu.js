@@ -80,9 +80,6 @@ function check_location_Hue() {
     return check;
 }
 
-
-
-
 function checkValidate(){
 
     let check = true;
