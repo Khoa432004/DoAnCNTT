@@ -1,0 +1,133 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   list-style-type: none;
+   font-family: Arial, Helvetica, sans-serif;
+   text-decoration: none;
+   color: white;
+}
+
+/*--------Header----------*/
+#header,
+#nav {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+#header .container {
+   width: 1260px;
+   display: flex;
+   justify-content: space-between;
+   height: 48px;
+   align-items: center;
+   font-size: 14px;
+  
+}
+
+.log-button,
+.reg-button {
+   padding: 4px 15px;
+   border: 1px solid white;
+   margin-left: 20px;
+}
+
+.log-button:hover,
+.reg-button:hover {
+   background-color: white;
+   color: #1F4456;
+}
+
+/*--------Header----------*/
+
+/*--------Nav----------*/
+#nav .container {
+   width: 1160px;
+   display: flex;
+   justify-content: space-between;
+   height: 64px;
+   align-items: center;
+   font-size: 14px;
+}
+
+#nav li {
+   display: inline-block;
+   padding: 20px 30px;
+}
+
+#nav li:hover {
+   background-color: #1F4456;
+   color: white;
+   border-radius: 8px;
+}
+
+#nav li:hover a {
+   color: white;
+}
+
+.book-button {
+   border: 1px solid black;
+   padding: 10px 15px;
+   color: black;
+   margin-left: 10px;
+}
+
+.book-button:hover {
+   color: white;
+   background-color: #1F4456;
+}
+
+.nav-right a {
+   color: black;
+   font-size: 16px;
+}
+
+.nav-left a {
+   font-size: 32px;
+   text-align: center;
+   color: #333;
+}
+
+.nav-left sup {
+   font-size: 16px;
+   font-style: italic;
+   color: #666;
+}
+
+/*--------Nav----------*/
+
+
+ /*Table*/
+
+ .table-da-book{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   margin-top: 50px;
+ }
+ table{
+   width: 98%;
+   border-collapse: collapse;
+
+   
+ }
+ table tr{
+
+   padding: 0;
+   margin: 0;
+   
+ }
+ 
+ 
+ table tr td{
+   
+   color: #1F4456;
+   border: 2px solid #1F4456;
+   text-align: center;
+   padding: 5px;
+   margin: 0;
+   font-weight: 600;
+   
+ }
+ 
