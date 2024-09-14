@@ -15,13 +15,13 @@ import javax.servlet.http.HttpServletResponse;
 public class AccountServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private AccountDAO accDao;
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public AccountServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public AccountServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see Servlet#init(ServletConfig)
@@ -45,20 +45,25 @@ public class AccountServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String TK = request.getParameter("email");
-        String MK = request.getParameter("password");
-
-        Account acc = new Account();
-        acc.setUsername(TK);
-        acc.setPassword(MK);
-
-        try {
-            accDao.registerAccount(acc);
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        response.sendRedirect("trangchu.html");
+		String MK = request.getParameter("password");
+		String NhapLaiMK = request.getParameter("re-password");
+		boolean check = false;
+		check = accDao.CheckMKTrung(MK, NhapLaiMK);
+		check = accDao.CheckNull(TK, MK, NhapLaiMK);
+		check = accDao.CheckTkDaTonTai(TK);
+		if(check == true)
+		{
+			Account acc = new Account();
+			acc.setUsername(TK);
+			acc.setPassword(MK);
+			try {
+				accDao.registerAccount(acc);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			response.sendRedirect("dangnhap.html");
+		}
 	}
 
 }
