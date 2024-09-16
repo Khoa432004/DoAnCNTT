@@ -48,10 +48,8 @@ public class AccountServlet extends HttpServlet {
 		String MK = request.getParameter("password");
 		String NhapLaiMK = request.getParameter("re-password");
 		boolean check = false;
-		check = accDao.CheckMKTrung(MK, NhapLaiMK);
-		check = accDao.CheckNull(TK, MK, NhapLaiMK);
-		check = accDao.CheckTkDaTonTai(TK);
-		if(check == true)
+		check = accDao.Check(TK,MK, NhapLaiMK);
+		if(true)
 		{
 			Account acc = new Account();
 			acc.setUsername(TK);
@@ -64,6 +62,7 @@ public class AccountServlet extends HttpServlet {
 			}
 			response.sendRedirect("dangnhap.html");
 		}
+		//Chưa thể hiện thông báo bằng JS lên để người dùng biết TK này đã được đăng kí
 	}
 
 }

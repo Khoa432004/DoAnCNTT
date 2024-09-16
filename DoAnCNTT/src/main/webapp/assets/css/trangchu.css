@@ -106,7 +106,7 @@
    background-attachment: fixed;
    background-repeat: no-repeat;
    background-size: cover;
-   background-image: url('../assets/img/bn1.jpg');
+   background-image: url(../img/bgr-diemden8.jpg);
    height: 600px;
    width: 100%;
    position: relative;
@@ -321,6 +321,7 @@ input[type="button"]:hover {
    color: black;
    margin: 10px;
 }
+
 
 /*--------Content--------*/
 

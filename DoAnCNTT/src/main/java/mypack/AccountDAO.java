@@ -28,7 +28,8 @@ public class AccountDAO {
         return result;
     }
     
-    public boolean CheckTkDaTonTai(String tk) {
+    public boolean CheckTkDaTonTai(String tk) 
+    {
         String SELECT_USER_BY_TK = "SELECT EXISTS (SELECT 1 FROM account WHERE TK = ?)";
 
         try (Connection connection = Dbconnection.getConnection();
@@ -37,13 +38,19 @@ public class AccountDAO {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
-                return resultSet.getBoolean(1);
+                return resultSet.getInt(1) > 0;
             }
         } catch (SQLException e) {
             printSQLException(e);
         }
-
+        
         return false;
+    }
+    public boolean CheckDoDaiMK(String mk ,String nhaplaimk)
+    {
+    	if(mk.length() < 8 || nhaplaimk.length() < 8)
+    		return false;
+    	return true;
     }
     public boolean CheckMKTrung(String mk,String nhaplaimk)
     {
@@ -57,6 +64,13 @@ public class AccountDAO {
     		return true;
     	return false;
     }
+    public boolean Check(String tk,String mk,String nhaplaimk)
+    {
+    	if(CheckDoDaiMK(mk, nhaplaimk) == true && CheckMKTrung(mk, nhaplaimk) == true && CheckNull(tk, mk, nhaplaimk) == true && CheckTkDaTonTai(tk) == false)
+    		return true;
+    	return false;
+    }
+
     private void printSQLException(SQLException ex) {
         for (Throwable e: ex) {
             if (e instanceof SQLException) {
