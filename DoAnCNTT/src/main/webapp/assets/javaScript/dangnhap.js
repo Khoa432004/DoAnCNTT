@@ -15,7 +15,7 @@ btn_log.addEventListener('click', function () {
 })
 
 function checkLogin() {
-    let emailValue = emailElement.value;
+/*    let emailValue = emailElement.value;
     let passwordValue = passwordElememt.value;
     const emailChecked = localStorage.getItem('email')
     const passwordChecked = localStorage.getItem('password')
@@ -25,7 +25,8 @@ function checkLogin() {
         return true;
     }
     alert('Tài khoản hoặc mật khẩu không đúng');
-    return false;
+    return false;*/
+	return true;
 }
 
 function checkValidate() {

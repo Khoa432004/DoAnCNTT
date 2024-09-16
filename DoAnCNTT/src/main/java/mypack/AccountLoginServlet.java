@@ -9,19 +9,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class AccountServlet
+ * Servlet implementation class AccountLoginServlet
  */
-@WebServlet("/dangky")
-public class AccountServlet extends HttpServlet {
+@WebServlet("/dangnhap")
+public class AccountLoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private AccountDAO accDao;
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public AccountServlet() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	private AccountDAO accDao;  
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public AccountLoginServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
 	/**
 	 * @see Servlet#init(ServletConfig)
@@ -44,25 +44,28 @@ public class AccountServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		boolean login = false;
 		String TK = request.getParameter("email");
 		String MK = request.getParameter("password");
-		String NhapLaiMK = request.getParameter("re-password");
 		boolean check = false;
-		check = accDao.Check(TK,MK, NhapLaiMK);
+		check = accDao.CheckLogin(TK,MK);
 		if(true)
 		{
 			Account acc = new Account();
 			acc.setUsername(TK);
 			acc.setPassword(MK);
 			try {
-				accDao.registerAccount(acc);
+				login = accDao.LogInAccount(acc);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			response.sendRedirect("dangnhap.html");
+			if(login)
+				response.sendRedirect("trangchu.html");
+			else
+				response.sendRedirect("dangnhap.html");
 		}
-		//Chưa thể hiện thông báo bằng JS lên để người dùng biết TK này đã được đăng kí
 	}
+
 
 }

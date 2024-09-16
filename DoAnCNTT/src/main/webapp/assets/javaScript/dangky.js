@@ -12,7 +12,6 @@ btn_reg.addEventListener('click', function () {
 
     if (checkValidate()) {
         alert('đăng ký thành công');
-        window.location.href = 'dangnhap.html';
     }
 });
 
@@ -59,9 +58,6 @@ function checkValidate() {
     } else {
         setSuccess(password1Elememt);
     }
-
-    localStorage.setItem('email', emailValue);
-    localStorage.setItem('password', passwordValue);
     return check;
 }
 

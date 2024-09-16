@@ -14,7 +14,8 @@ public class AccountDAO {
         try (Connection connection = Dbconnection.getConnection() ;
 
             // Step 2:Create a statement using connection object
-            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) 
+        {
             preparedStatement.setString(1, acc.getUsername());
             preparedStatement.setString(2, acc.getPassword());
             // Step 3: Execute the query or update query
@@ -27,7 +28,24 @@ public class AccountDAO {
         }
         return result;
     }
-    
+    public boolean LogInAccount(Account acc) throws ClassNotFoundException {
+        String SELECT_USERS_SQL = "SELECT * FROM account WHERE TK = ? AND MK = ?";
+
+        boolean result1 = false;
+        try (Connection connection = Dbconnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USERS_SQL))
+        {
+     
+            preparedStatement.setString(1, acc.getUsername());
+            preparedStatement.setString(2, acc.getPassword());
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            result1 = resultSet.next();
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return result1;
+    }
     public boolean CheckTkDaTonTai(String tk) 
     {
         String SELECT_USER_BY_TK = "SELECT EXISTS (SELECT 1 FROM account WHERE TK = ?)";
@@ -64,13 +82,18 @@ public class AccountDAO {
     		return true;
     	return false;
     }
-    public boolean Check(String tk,String mk,String nhaplaimk)
+    public boolean CheckRegister(String tk,String mk,String nhaplaimk)
     {
     	if(CheckDoDaiMK(mk, nhaplaimk) == true && CheckMKTrung(mk, nhaplaimk) == true && CheckNull(tk, mk, nhaplaimk) == true && CheckTkDaTonTai(tk) == false)
     		return true;
     	return false;
     }
-
+    public boolean CheckLogin(String tk,String mk)
+    {
+    	if(CheckDoDaiMK(mk,"123456789") == true  && CheckNull(tk, mk,"123") == true)
+    		return true;
+    	return false;
+    }
     private void printSQLException(SQLException ex) {
         for (Throwable e: ex) {
             if (e instanceof SQLException) {
