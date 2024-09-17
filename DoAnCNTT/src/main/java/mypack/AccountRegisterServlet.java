@@ -44,23 +44,27 @@ public class AccountRegisterServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
 		String TK = request.getParameter("email");
 		String MK = request.getParameter("password");
 		String NhapLaiMK = request.getParameter("re-password");
 		boolean check = false;
-		check = accDao.CheckRegister(TK,MK, NhapLaiMK);
-		if(true)
+		check = accDao.CheckRegister(TK,MK,NhapLaiMK);
+		if(check)
 		{
 			Account acc = new Account();
 			acc.setUsername(TK);
 			acc.setPassword(MK);
 			try {
-				accDao.LogInAccount(acc);
+				accDao.registerAccount(acc);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			response.sendRedirect("dangnhap.html");
+		}
+		else {
+			response.sendRedirect("uudai.html");
 		}
 	}
 

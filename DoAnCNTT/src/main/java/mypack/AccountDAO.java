@@ -56,7 +56,7 @@ public class AccountDAO {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
-                return resultSet.getInt(1) > 0;
+                return resultSet.getInt(1) <= 0;
             }
         } catch (SQLException e) {
             printSQLException(e);
@@ -72,7 +72,7 @@ public class AccountDAO {
     }
     public boolean CheckMKTrung(String mk,String nhaplaimk)
     {
-    	if(mk == nhaplaimk)
+    	if(mk.equals(nhaplaimk))
     		return true;
     	return false;
     }
@@ -82,11 +82,16 @@ public class AccountDAO {
     		return true;
     	return false;
     }
-    public boolean CheckRegister(String tk,String mk,String nhaplaimk)
-    {
-    	if(CheckDoDaiMK(mk, nhaplaimk) == true && CheckMKTrung(mk, nhaplaimk) == true && CheckNull(tk, mk, nhaplaimk) == true && CheckTkDaTonTai(tk) == false)
-    		return true;
-    	return false;
+    public boolean CheckRegister(String tk, String mk, String nhaplaimk) {
+        if (CheckDoDaiMK(mk, nhaplaimk) == true &&
+            CheckMKTrung(mk, nhaplaimk) == true &&
+            CheckNull(tk, mk, nhaplaimk) == true &&
+            CheckTkDaTonTai(tk) == true) 
+        {
+            return true;
+        }
+        else
+        	return false;
     }
     public boolean CheckLogin(String tk,String mk)
     {
