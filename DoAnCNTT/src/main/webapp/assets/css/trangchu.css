@@ -26,15 +26,24 @@
 
 }
 
+#username-button1,
+#logout-button1,
 .log-button,
-.reg-button {
+.reg-button,
+.username-button,
+.logout-button{
    padding: 4px 15px;
    border: 1px solid white;
    margin-left: 20px;
 }
 
+#username-button1:hover,
+#logout-button1:hover,
 .log-button:hover,
-.reg-button:hover {
+.reg-button:hover,
+.username-button:hover,
+.logout-button:hover
+{
    background-color: white;
    color: #1F4456;
 }

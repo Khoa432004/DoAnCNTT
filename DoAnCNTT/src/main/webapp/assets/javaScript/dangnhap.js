@@ -2,15 +2,14 @@ const emailElement = document.getElementById('email');
 const passwordElememt = document.getElementById('password');
 const btn_log = document.getElementById('btn-dangnhap');
 const inputElement = document.querySelectorAll('.input-row');
-
 btn_log.addEventListener('click', function () {
     Array.from(inputElement).map((element) =>
         element.classList.remove('success', 'error')
     )
 
     if (checkValidate() && checkLogin()) {
-        alert('đăng nhập thành công');
-        window.location.href = 'trangchu.html';
+/*        alert('đăng nhập thành công');
+        window.location.href = 'trangchu.html';*/
     }
 })
 

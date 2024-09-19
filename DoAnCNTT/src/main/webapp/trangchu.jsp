@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
 
@@ -17,21 +19,53 @@
                 <div class="num">+84 773 914 830</div>
             </div>
             <div class="header-right">
-                <a href="dangnhap.html" class="log-button">Đăng Nhập</a>
-                <a href="dangky.html" class="reg-button">Đăng Ký</a>
+            <form action="dangxuat" method="post">
+	            <% if (session.getAttribute("Username") == null) 
+	            { %>
+	                <a href="dangnhap.html" class="log-button" id="log-button1">Đăng Nhập</a>
+	                <a href="dangky.html" class="reg-button" id="reg-button1">Đăng Ký</a> 
+	        	<% } 
+	            else 
+	            { %>
+	                <a href="" class="username-button" id="username-button1" >${sessionScope.Username}</a>
+	               	<a href="trangchu.jsp" class="logout-button" id="logout-button1" >Đăng Xuất</a>
+	        	<% } 
+	        	%>
+        	</form>
             </div>
+            
+            <script>
+            var username = '<%= session.getAttribute("Username") %>';
+		    console.log(username)
+            </script>
+<%--             <script>
+			Method 2
+            const btn_login =  document.getElementById("log-button1");
+            const btn_reg = document.getElementById("reg-button1");
+            const btn_logout = document.getElementById("logout-button1");
+            const btn_username = document.getElementById("username-button1");
+		    var username = '<%= session.getAttribute("Username") %>';
+		    console.log(username)
+		    if (username != null) 
+		    {	
+		        btn_login.style.display = "none";
+				btn_reg.style.display = "none";
+		    }
+		     
+	    	
+	    	 --%>
         </div>
     </div>
     <div id="nav" style="background-color: rgb(240, 240, 240);">
         <div class="container">
             <div class="nav-left">
-                <a href="trangchu.html">Padago<sup>hotel</sup></a>
+                <a href="trangchu.jsp">Padago<sup>hotel</sup></a>
             </div>
             <div class="nav-right">
                 <ul>
                     <li><a href="#diemden">Điểm đến</a></li>
                     <li><a href="uudai.html">Ưu đãi</a></li>
-                    <li><a href="khachsandadat.html">Đã Đặt</a></li>
+                    <li><a href="">Đã Đặt</a></li><!-- khachsandadat.html -->
                     <li><a href="help-center.html">Trợ giúp</a></li>
                     <a href="#" class="book-button">ĐẶT NGAY</a>
                 </ul>
@@ -41,7 +75,7 @@
     <div id="search-box">
         <div class="box-title">
             <h1>LUXURY HOTEL & BEST RESORT</h1>
-            <a href="trangchu.html" class="btn">BOOK NOW</a>
+            <a href="trangchu.jsp" class="btn">BOOK NOW</a>
         </div>
         <div class="box-pop">
             <div class="pop" style="width: 280px; position: relative;">
@@ -95,7 +129,7 @@
                     </p>
                     </p>
                 </div>
-                <a href="trangchu.html" class="btn" style="background-color: #A0825E">Tận hưởng
+                <a href="trangchu.jsp" class="btn" style="background-color: #A0825E">Tận hưởng
                     ngay</a>
             </div>
             <div class="content-part-2">

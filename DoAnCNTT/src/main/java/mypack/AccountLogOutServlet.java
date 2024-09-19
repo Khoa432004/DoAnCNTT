@@ -1,8 +1,7 @@
 package mypack;
 
+import java.io.Console;
 import java.io.IOException;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,16 +11,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class AccountLoginServlet
+ * Servlet implementation class AccountLogOutServlet
  */
-@WebServlet("/dangnhap")
-public class AccountLoginServlet extends HttpServlet {
+@WebServlet("/dangxuat")
+public class AccountLogOutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private AccountDAO accDao;  
+	private AccountDAO accDao;
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AccountLoginServlet() {
+    public AccountLogOutServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -47,32 +46,8 @@ public class AccountLoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		boolean login = false;
-		String TK = request.getParameter("email");
-		String MK = request.getParameter("password");
-		boolean check = false;
-		check = accDao.CheckLogin(TK,MK);
-		if(true)
-		{
-			HttpSession session = request.getSession(true);
-			session.setAttribute("Username", TK);
-			Account acc = new Account();
-			acc.setUsername(TK);
-			acc.setPassword(MK);
-			try {
-				login = accDao.LogInAccount(acc);
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			if(login)
-			{
-				response.sendRedirect("trangchu.jsp");
-			}
-			else
-				response.sendRedirect("dangnhap.html");
-		}
+		HttpSession session = request.getSession();
+		session.invalidate();
 	}
-
 
 }
