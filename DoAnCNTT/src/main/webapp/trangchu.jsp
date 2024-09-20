@@ -19,19 +19,20 @@
                 <div class="num">+84 773 914 830</div>
             </div>
             <div class="header-right">
-            <form action="dangxuat" method="post">
 	            <% if (session.getAttribute("Username") == null) 
 	            { %>
-	                <a href="dangnhap.html" class="log-button" id="log-button1">Đăng Nhập</a>
+	              	<a href="dangnhap.html" class="log-button" id="log-button1">Đăng Nhập</a>
 	                <a href="dangky.html" class="reg-button" id="reg-button1">Đăng Ký</a> 
+	                
 	        	<% } 
 	            else 
 	            { %>
-	                <a href="" class="username-button" id="username-button1" >${sessionScope.Username}</a>
-	               	<a href="trangchu.jsp" class="logout-button" id="logout-button1" >Đăng Xuất</a>
+	               	<form action="dangxuat" method="post" class="form-logout-button">
+	               		<a href="" class="username-button" id="username-button1" >${sessionScope.Username}</a>
+					    <button type="submit" id="logout-button1" class="logout-button" >Đăng Xuất</button>
+					</form>
 	        	<% } 
 	        	%>
-        	</form>
             </div>
             
             <script>

@@ -26,26 +26,36 @@
 
 }
 
-#username-button1,
-#logout-button1,
-.log-button,
-.reg-button,
-.username-button,
-.logout-button{
+#username-button1.username-button,
+#logout-button1.logout-button,
+#log-button1.log-button,
+#reg-button1.reg-button
+{
    padding: 4px 15px;
    border: 1px solid white;
-   margin-left: 20px;
+   margin-left: 10px;
 }
-
-#username-button1:hover,
-#logout-button1:hover,
-.log-button:hover,
-.reg-button:hover,
-.username-button:hover,
-.logout-button:hover
+.form-logout-button:hover
+#username-button1.username-button:hover,
+#logout-button1.logout-button:hover,
+#log-button1.log-button:hover,
+#reg-button1.reg-button:hover
 {
    background-color: white;
    color: #1F4456;
+}
+.form-logout-button {
+  display: block;
+  margin: 0;
+  padding: 0; 
+}
+
+.logout-button {
+	background-color: inherit;
+}
+
+.logout-button:hover {
+  
 }
 
 /*--------Header----------*/
