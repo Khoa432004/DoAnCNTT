@@ -21,8 +21,8 @@
             <div class="header-right">
 	            <% if (session.getAttribute("Username") == null) 
 	            { %>
-	              	<a href="dangnhap.html" class="log-button" id="log-button1">Đăng Nhập</a>
-	                <a href="dangky.html" class="reg-button" id="reg-button1">Đăng Ký</a> 
+	              	<a href="dangnhap.jsp" class="log-button" id="log-button1">Đăng Nhập</a>
+	                <a href="dangky.jsp" class="reg-button" id="reg-button1">Đăng Ký</a> 
 	                
 	        	<% } 
 	            else 
@@ -65,9 +65,9 @@
             <div class="nav-right">
                 <ul>
                     <li><a href="#diemden">Điểm đến</a></li>
-                    <li><a href="uudai.html">Ưu đãi</a></li>
-                    <li><a href="">Đã Đặt</a></li><!-- khachsandadat.html -->
-                    <li><a href="help-center.html">Trợ giúp</a></li>
+                    <li><a href="uudai.jsp">Ưu đãi</a></li>
+                    <li><a href="">Đã Đặt</a></li><!-- khachsandadat.jsp -->
+                    <li><a href="help-center.jsp">Trợ giúp</a></li>
                     <a href="#" class="book-button">ĐẶT NGAY</a>
                 </ul>
             </div>
@@ -141,7 +141,7 @@
                         <img src="assets/img/offer1.png" alt="Offer 1">
                         <p>
                             <br>Nhận ngay 8% giảm giá vào mỗi đơn đặt tour từ các ngày thứ 2 - thứ 6 hằng tuần
-                            <br><a href="uudai.html" class="btn">Chi Tiết</a>
+                            <br><a href="uudai.jsp" class="btn">Chi Tiết</a>
                         </p>
                     </div>
 
@@ -150,7 +150,7 @@
                         <h3></h3>
                         <p>
                             <br>Trở thành khách hàng thân thiết của Pagoda và các quyền lợi hấp dẫn
-                            <br><a href="uudai.html" class="btn">Chi Tiết</a>
+                            <br><a href="uudai.jsp" class="btn">Chi Tiết</a>
                         </p>
 
                     </div>
@@ -164,35 +164,35 @@
                         <img src="assets/img/des1.jpg" alt="Destination 1">
                         <h3>Vũng Tàu</h3>
                         <p>Khám phá những bãi biển vũng tàu cùng món ăn độc lạ</p>
-                        <a href="diemden-VungTau.html">Chi Tiết</a>
+                        <a href="diemden-VungTau.jsp">Chi Tiết</a>
                     </div>
 
                     <div class="card-2">
                         <img src="assets/img/des2.jpg" alt="Destination 2">
                         <h3>Hà Nội</h3>
                         <p>Khám phá văn hóa con người Việt Nam một cách chân thật nhất</p>
-                        <a href="diemden-HaNoi.html">Chi Tiết</a>
+                        <a href="diemden-HaNoi.jsp">Chi Tiết</a>
                     </div>
 
                     <div class="card-2">
                         <img src="assets/img/des3.jpg" alt="Destination 3">
                         <h3>TP Hồ Chí Minh</h3>
                         <p>Khám phá những quán ăn cùng không khí nhộn nhịp, mát mẻ</p>
-                        <a href="diemden-HoChiMinh.html">Chi Tiết</a>
+                        <a href="diemden-HoChiMinh.jsp">Chi Tiết</a>
                     </div>
 
                     <div class="card-2">
                         <img src="assets/img/des4.jpg" alt="Destination 4">
                         <h3>Huế</h3>
                         <p>Khám phá văn hóa, phong tục tập quán từ lâu đời của Việt Nam</p>
-                        <a href="diemden-Hue.html">Chi Tiết</a>
+                        <a href="diemden-Hue.jsp">Chi Tiết</a>
                     </div>
 
                     <div class="card-2">
                         <img src="assets/img/des5.jpg" alt="Destination 5" style="height: 136px;">
                         <h3>Đà Nẵng</h3>
                         <p>Khám phá núi, biển, địa điểm nổi tiếng như Cầu Rồng</p>
-                        <a href="diemden-DaNang.html">Chi Tiết</a>
+                        <a href="diemden-DaNang.jsp">Chi Tiết</a>
                     </div>
                 </div>
             </div>

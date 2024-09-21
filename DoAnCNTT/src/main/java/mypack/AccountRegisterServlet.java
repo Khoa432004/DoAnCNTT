@@ -44,27 +44,44 @@ public class AccountRegisterServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
 		String TK = request.getParameter("email");
 		String MK = request.getParameter("password");
 		String NhapLaiMK = request.getParameter("re-password");
-		boolean check = false;
-		check = accDao.CheckRegister(TK,MK,NhapLaiMK);
-		if(check)
+		String AlertMessage = "";
+		if(accDao.CheckNull(TK, MK,NhapLaiMK))
+		{
+			AlertMessage = "Tài khoản hoặc mật khẩu không được để trống";
+			request.getSession().setAttribute("Fail", AlertMessage);
+		}
+		else if(!accDao.CheckDoDaiMK(MK, NhapLaiMK))
+		{
+			AlertMessage = "Độ dài mật khẩu phải lớn hơn 8";
+			request.getSession().setAttribute("Fail", AlertMessage);
+		}
+		else if(!accDao.CheckMKTrung(MK, NhapLaiMK))
+		{
+			AlertMessage = "Mật khẩu nhập lại không trùng khớp";
+			request.getSession().setAttribute("Fail", AlertMessage);
+		}
+		else if(!accDao.CheckTkDaTonTai(TK))
+		{
+			AlertMessage = "Tài khoản hoặc mật khẩu không chính xác";
+			request.getSession().setAttribute("Fail", AlertMessage);
+		}
+		else
 		{
 			Account acc = new Account();
 			acc.setUsername(TK);
 			acc.setPassword(MK);
 			try {
 				accDao.registerAccount(acc);
+				AlertMessage = "Đăng ký thành công";
+				request.getSession().setAttribute("Success", AlertMessage);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			response.sendRedirect("dangnhap.html");
-		}
-		else {
-			response.sendRedirect("uudai.html");
+			response.sendRedirect("dangnhap.jsp");
 		}
 	}
 

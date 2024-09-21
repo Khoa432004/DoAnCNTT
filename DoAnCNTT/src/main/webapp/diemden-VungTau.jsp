@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,23 +26,23 @@
                     <div class="num" style="color: white;">+84 3793 5332 420</div>
                 </div>
                 <div class="header-right">
-                    <a href="dangnhap.html" class="log-button">Đăng Nhập</a>
-                    <a href="dangky.html" class="reg-button">Đăng Ký</a>
+                    <a href="dangnhap.jsp" class="log-button">Đăng Nhập</a>
+                    <a href="dangky.jsp" class="reg-button">Đăng Ký</a>
                 </div>
             </div>
         </div>
         <div id="nav">
             <div class="container">
                 <div class="nav-left">
-                    <a href="trangchu.html" style="color: white;">Padago<sup
+                    <a href="trangchu.jsp" style="color: white;">Padago<sup
                             style="color: white;">hotel</sup></a>
                 </div>
                 <div class="nav-right">
                     <ul>
                         <li><a href="#" style="color: white;">Điểm đến</a></li>
-                        <li><a href="uudai.html" style="color: white;">Ưu đãi</a></li>
-                        <li><a href="khachsandadat.html" style="color: white;">Đã Đặt</a></li>
-                        <li><a href="help-center.html" style="color: white;">Trợ giúp</a></li>
+                        <li><a href="uudai.jsp" style="color: white;">Ưu đãi</a></li>
+                        <li><a href="khachsandadat.jsp" style="color: white;">Đã Đặt</a></li>
+                        <li><a href="help-center.jsp" style="color: white;">Trợ giúp</a></li>
                         <a href="#" class="book-button" style="color: white;">ĐẶT NGAY</a>
                     </ul>
                 </div>
@@ -81,11 +83,11 @@
             <div class="main-content row mt-2">
                 <div id="duongdanvitri">
                     <ul>
-                        <li><a href="trangchu.html">Trang chủ </a></li>
+                        <li><a href="trangchu.jsp">Trang chủ </a></li>
                         <li><i class="ti-angle-right"> </i></li>
                         <li><a href="">Điểm đến </a></li>
                         <li><i class="ti-angle-right"> </i></li>
-                        <li><a href="diemden-VungTau.html">Vũng Tàu </a></li>
+                        <li><a href="diemden-VungTau.jsp">Vũng Tàu </a></li>
                     </ul>
                 </div>
 
@@ -314,7 +316,7 @@
                                         <p class="giamoi">VND 1.000.000 </p>
                                         <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm
                                             thuế và phí</p>
-                                        <a href="VT-1.html" id="datngay1" class="btn btn-success mt-2">Đặt Phòng Ngay <i
+                                        <a href="VT-1.jsp" id="datngay1" class="btn btn-success mt-2">Đặt Phòng Ngay <i
                                                 style="color: white;" class="ti-angle-right"></i></a>
                                     </div>
                                 </div>
@@ -359,7 +361,7 @@
                                         <p class="giamoi">VND 700.000 </p>
                                         <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm
                                             thuế và phí</p>
-                                        <a href="VT-2.html" id="datngay2" class="btn btn-success mt-2">Đặt Phòng Ngay <i
+                                        <a href="VT-2.jsp" id="datngay2" class="btn btn-success mt-2">Đặt Phòng Ngay <i
                                                 style="color: white;" class="ti-angle-right"></i></a>
                                     </div>
                                 </div>
@@ -413,7 +415,7 @@
                                         <p class="giamoi">VND 2.200.000 </p>
                                         <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm
                                             thuế và phí</p>
-                                        <a href="VT-3.html" id="datngay3" class="btn btn-success mt-2">Đặt Phòng Ngay <i
+                                        <a href="VT-3.jsp" id="datngay3" class="btn btn-success mt-2">Đặt Phòng Ngay <i
                                                 style="color: white;" class="ti-angle-right"></i></a>
                                     </div>
                                 </div>
@@ -464,7 +466,7 @@
                                         <p class="giamoi">VND 650.000 </p>
                                         <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm
                                             thuế và phí</p>
-                                        <a href="VT-4.html" id="datngay4" class="btn btn-success mt-2">Đặt Phòng Ngay <i
+                                        <a href="VT-4.jsp" id="datngay4" class="btn btn-success mt-2">Đặt Phòng Ngay <i
                                                 style="color: white;" class="ti-angle-right"></i></a>
                                     </div>
                                 </div>
@@ -517,7 +519,7 @@
                                         <p class="giamoi">VND 1.780.000 </p>
                                         <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm
                                             thuế và phí</p>
-                                        <a href="VT-5.html" id="datngay5" class="btn btn-success mt-2">Đặt Phòng Ngay <i
+                                        <a href="VT-5.jsp" id="datngay5" class="btn btn-success mt-2">Đặt Phòng Ngay <i
                                                 style="color: white;" class="ti-angle-right"></i></a>
                                     </div>
                                 </div>

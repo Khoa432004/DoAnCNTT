@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,8 +32,8 @@
                 <ul>
                     <li><a href="trangchu.jsp">Điểm đến</a></li>
                     <li><a href="#">Ưu đãi</a></li>
-                    <li><a href="khachsandadat.html">Đã Đặt</a></li>
-                    <li><a href="help-center.html">Trợ giúp</a></li>
+                    <li><a href="khachsandadat.jsp">Đã Đặt</a></li>
+                    <li><a href="help-center.jsp">Trợ giúp</a></li>
                     <a href="#" class="book-button">ĐẶT NGAY</a>
                 </ul>
             </div>

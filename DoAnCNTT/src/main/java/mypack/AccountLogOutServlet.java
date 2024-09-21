@@ -47,7 +47,11 @@ public class AccountLogOutServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
+		String AlertMessage = "";
+		AlertMessage = "Đăng xuất thành công";
+		request.getSession().setAttribute("Success", AlertMessage);
 		session.invalidate();
+		
 		response.sendRedirect("trangchu.jsp");
 	}
 

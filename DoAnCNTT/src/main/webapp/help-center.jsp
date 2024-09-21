@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,8 +18,8 @@
                 <div class="num">+84 3793 5332 420</div>
             </div>
             <div class="header-right">
-                <a href="dangnhap.html" class="log-button">Đăng Nhập</a>
-                <a href="dangky.html" class="reg-button">Đăng Ký</a>
+                <a href="dangnhap.jsp" class="log-button">Đăng Nhập</a>
+                <a href="dangky.jsp" class="reg-button">Đăng Ký</a>
             </div>
         </div>
     </div>
@@ -29,8 +31,8 @@
             <div class="nav-right">
                 <ul>
                     <li><a href="trangchu.jsp">Điểm đến</a></li>
-                    <li><a href="uudai.html">Ưu đãi</a></li>
-                    <li><a href="khachsandadat.html">Đã Đặt</a></li>
+                    <li><a href="uudai.jsp">Ưu đãi</a></li>
+                    <li><a href="khachsandadat.jsp">Đã Đặt</a></li>
                     <li><a href="#">Trợ giúp</a></li>
                     <a href="#" class="book-button">ĐẶT NGAY</a>
                 </ul>

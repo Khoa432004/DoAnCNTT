@@ -11,7 +11,7 @@ btn_reg.addEventListener('click', function () {
     )
 
     if (checkValidate()) {
-        alert('đăng ký thành công');
+        /*alert('đăng ký thành công');*/
     }
 });
 

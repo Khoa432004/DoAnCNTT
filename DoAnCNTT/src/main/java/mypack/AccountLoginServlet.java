@@ -50,9 +50,19 @@ public class AccountLoginServlet extends HttpServlet {
 		boolean login = false;
 		String TK = request.getParameter("email");
 		String MK = request.getParameter("password");
-		boolean check = false;
-		check = accDao.CheckLogin(TK,MK);
-		if(true)
+		String AlertMessage = "";
+		if(accDao.CheckNull(TK, MK,MK))	
+		{	
+			AlertMessage = "Tài khoản hoặc mật khẩu không được để trống";
+			request.getSession().setAttribute("Fail", AlertMessage);
+		}
+		else if(!accDao.CheckDoDaiMK(MK, MK))
+		{
+			response.sendRedirect("uudai.jsp");
+			AlertMessage = "Độ dài mật khẩu phải lớn hơn 8";
+			request.getSession().setAttribute("Fail", AlertMessage);
+		}
+		else
 		{
 			HttpSession session = request.getSession(true);
 			session.setAttribute("Username", TK);
@@ -61,6 +71,7 @@ public class AccountLoginServlet extends HttpServlet {
 			acc.setPassword(MK);
 			try {
 				login = accDao.LogInAccount(acc);
+				
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -68,9 +79,15 @@ public class AccountLoginServlet extends HttpServlet {
 			if(login)
 			{
 				response.sendRedirect("trangchu.jsp");
+				AlertMessage = "Đăng nhập thành công";
+				request.getSession().setAttribute("Success", AlertMessage);
 			}
 			else
-				response.sendRedirect("dangnhap.html");
+			{
+				AlertMessage = "Tài khoản hoặc mật khẩu không chính xác";
+				request.getSession().setAttribute("Fail", AlertMessage);
+				response.sendRedirect("dangnhap.jsp");
+			}	
 		}
 	}
 

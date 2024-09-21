@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,8 +23,8 @@
                 <a id="pandago" href="trangchu.jsp">Padago<sup>hotel</sup></a>
             </div>
             <div class="header-right">
-                <a href="dangnhap.html" class="log-button">Đăng Nhập</a>
-                <a href="dangky.html" class="reg-button">Đăng Ký</a>
+                <a href="dangnhap.jsp" class="log-button">Đăng Nhập</a>
+                <a href="dangky.jsp" class="reg-button">Đăng Ký</a>
             </div>
         </div>
     </div>
@@ -51,6 +53,18 @@
                         placeholder="Nhập mật khẩu">
                 </div>
                 <button class=" btn mt-3" id="btn-dangnhap" href="">Đăng nhập</button>
+<%--                 <%
+		            Object success = request.getSession().getAttribute("Success");
+		            if (success != null) 
+		            {
+		                out.print(success);
+		                request.getSession().removeAttribute("Success");
+		            }
+		            else
+		            {
+		                Object alert = request.getAttribute("Fail");
+		            }
+	            %> --%>
             </form>
 
 

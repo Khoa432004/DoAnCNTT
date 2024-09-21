@@ -78,7 +78,7 @@ public class AccountDAO {
     }
     public boolean CheckNull(String tk ,String mk,String nhaplaimk)
     {
-    	if(tk != null && mk != null && nhaplaimk != null)
+    	if(tk.isEmpty() && mk.isEmpty() && nhaplaimk.isEmpty())
     		return true;
     	return false;
     }

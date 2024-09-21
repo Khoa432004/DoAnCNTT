@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,9 +76,9 @@
             <div class="nav-right">
                 <ul>
                     <li><a href="#" style="color: white;">Điểm đến</a></li>
-                    <li><a href="uudai.html" style="color: white;">Ưu đãi</a></li>
-                    <li><a href="khachsandadat.html" style="color: white;">Đã Đặt</a></li>
-                    <li><a href="help-center.html" style="color: white;">Trợ giúp</a></li>
+                    <li><a href="uudai.jsp" style="color: white;">Ưu đãi</a></li>
+                    <li><a href="khachsandadat.jsp" style="color: white;">Đã Đặt</a></li>
+                    <li><a href="help-center.jsp" style="color: white;">Trợ giúp</a></li>
                     <a href="#phongtrong" class="book-button" style="color: white;">ĐẶT NGAY</a>
                 </ul>
             </div>
@@ -123,7 +125,7 @@
 
                                 <div class="text-1  ">
                                     <div class="text-left col-sm">
-                                        <a id="itemt-title" href="VT-1.html" style="font-size: 13px;">Fati Boutique
+                                        <a id="itemt-title" href="VT-1.jsp" style="font-size: 13px;">Fati Boutique
                                             Hotel &
                                             Apartment</a>
                                         <p style="color: black; font-size: 13px; "><i class="ti-location-pin"></i> Vị
@@ -144,7 +146,7 @@
 
                                 <div class="text-1  ">
                                     <div class="text-left col-sm">
-                                        <a id="itemt-title" href="VT-2.html" style="font-size: 13px;">THE SONG
+                                        <a id="itemt-title" href="VT-2.jsp" style="font-size: 13px;">THE SONG
                                             Apartment</a>
                                         <p style="color: black; font-size: 13px; "><i class="ti-location-pin"></i> Vị
                                             trí: Đường Thi Sách, Vũng Tàu</p>
@@ -165,7 +167,7 @@
 
                                 <div class="text-1  ">
                                     <div class="text-left col-sm">
-                                        <a id="itemt-title" href="VT-3.html" style="font-size: 13px;">The Land Hotel &
+                                        <a id="itemt-title" href="VT-3.jsp" style="font-size: 13px;">The Land Hotel &
                                             Apartment
                                         </a>
                                         <p style="color: black; font-size: 13px; "><i class="ti-location-pin"></i> Vị
@@ -188,7 +190,7 @@
 
                                 <div class="text-1  ">
                                     <div class="text-left col-sm">
-                                        <a id="itemt-title" href="VT-4.html" style="font-size: 13px;">The Land Hotel &
+                                        <a id="itemt-title" href="VT-4.jsp" style="font-size: 13px;">The Land Hotel &
                                             Apartment<i class="ti-star"></i><i class="ti-star"></i><i
                                                 class="ti-star"></i></a>
                                         <p style="color: black; font-size: 13px; "><i class="ti-location-pin"></i> Vị
@@ -209,7 +211,7 @@
 
                                 <div class="text-1  ">
                                     <div class="text-left col-sm">
-                                        <a id="itemt-title" href="VT-5.html" style="font-size: 13px;">V Boutique
+                                        <a id="itemt-title" href="VT-5.jsp" style="font-size: 13px;">V Boutique
                                             Hotel<i class="ti-star"></i><i class="ti-star"></i><i
                                                 class="ti-star"></i></a>
                                         <p style="color: black; font-size: 13px; "><i class="ti-location-pin"></i> Vị
