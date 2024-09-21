@@ -4,18 +4,17 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Booking_hotel/DangKy</title>
-<link rel="icon" href="assets/img/logo.png" type="image/png">
-<link rel="stylesheet" href="assets/icon/themify-icons/themify-icons.css">
-<link rel="stylesheet" href="assets/css/dangky.css">
-
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-	crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Booking_hotel/DangKy</title>
+	<link rel="icon" href="assets/img/logo.png" type="image/png">
+	<link rel="stylesheet" href="assets/icon/themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="assets/css/dangky.css">
+	<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+		crossorigin="anonymous">
 </head>
 
 <body>
@@ -26,8 +25,20 @@
 				<a id="pandago" href="trangchu.jsp">Padago<sup>hotel</sup></a>
 			</div>
 			<div class="header-right">
-				<a href="dangnhap.jsp" class="log-button">Đăng Nhập</a> <a
-					href="dangky.jsp" class="reg-button">Đăng Ký</a>
+	            <% if (session.getAttribute("Username") == null) 
+	            { %>
+	              	<a href="dangnhap.jsp" class="log-button" id="log-button1">Đăng Nhập</a>
+	                <a href="dangky.jsp" class="reg-button" id="reg-button1">Đăng Ký</a> 
+	                
+	        	<% } 
+	            else 
+	            { %>
+	               	<form action="dangxuat" method="post" class="form-logout-button">
+	               		<a href="" class="username-button" id="username-button1" >${sessionScope.Username}</a>
+					    <button type="submit" id="logout-button1" class="logout-button" >Đăng Xuất</button>
+					</form>
+	        	<% } 
+	        	%>
 			</div>
 		</div>
 	</div>
@@ -35,33 +46,40 @@
 	<!--content-->
 	<div class="content d-flex justify-content-center mt-3">
 		<div class="main-content row ">
-			<h5>Đăng ký tài khoản</h5>
-			<form action="dangky" method="post" class="form mt-3">
+			<h5>Đổi mật khẩu</h5>
+			<form action="doimatkhau" method="post" class="form mt-3">
 					<div class="input-row">
 						<label class="form-label mt-1" style="font-weight: 600;"
 							for="email">Địa chỉ email <span
 							style="color: red; font-weight: 500;">(*)</span>
-						</label> <input class="form-control" type="email" name="email" id="email"
-							placeholder="Nhập địa chỉ email của bạn">
+						</label> <a href="" class="form-control" type="email" id="email" >${sessionScope.Username}</a>
 					</div>
 	
 					<div class="input-row">
 						<label class="form-label mt-1 " style="font-weight: 600;"
-							for="password">Mật khẩu <span
+							for="password">Mật khẩu hiện tại<span
 							style="color: red; font-weight: 500;">(*)</span>
 						</label> <input class="form-control" type="password" name="password"
-							id="password" placeholder="Nhập mật khẩu">
+							id="password" placeholder="Nhập mật khẩu hiện tại">
 					</div>
 	
 					<div class="input-row">
 						<label class="form-label mt-1" style="font-weight: 600;"
-							for="re-password">Nhập lại mật khẩu <span
+							for="re-password">Mật khẩu mới<span
+							style="color: red; font-weight: 500;">(*)</span>
+						</label> <input class="form-control" type="password" name="new-password"
+							id="new-password" placeholder="Nhập mật khẩu mới">
+					</div>
+					
+					<div class="input-row">
+						<label class="form-label mt-1" style="font-weight: 600;"
+							for="re-password">Nhập lại mật khẩu mới <span
 							style="color: red; font-weight: 500;">(*)</span>
 						</label> <input class="form-control" type="password" name="re-password"
-							id="re-password" placeholder="Nhập Lại mật khẩu">
+							id="re-password" placeholder="Nhập Lại mật khẩu mới">
 					</div>
-					<button class="btn mt-3" id="btn-dangky">Đăng ký</button>
-				</form>
+					
+					<button class="btn mt-3" id="btn-doimatkhau">Đổi mật khẩu</button>
 			</form>
 
 			<div class="text-sub text-center mt-3">

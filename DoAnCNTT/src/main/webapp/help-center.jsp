@@ -18,8 +18,21 @@
                 <div class="num">+84 3793 5332 420</div>
             </div>
             <div class="header-right">
-                <a href="dangnhap.jsp" class="log-button">Đăng Nhập</a>
-                <a href="dangky.jsp" class="reg-button">Đăng Ký</a>
+                <% if (session.getAttribute("Username") == null) 
+	            { %>
+	              	<a href="dangnhap.jsp" class="log-button" id="log-button1">Đăng Nhập</a>
+	                <a href="dangky.jsp" class="reg-button" id="reg-button1">Đăng Ký</a> 
+	                
+	        	<% } 
+	            else 
+	            { %>
+	               	<form action="dangxuat" method="post" class="form-logout-button">
+	               		<a href="" class="username-button" id="username-button1" >${sessionScope.Username}</a>
+	               		<a href="doimatkhau.jsp" class="changepass-button" id="changepass-button1" >Đổi mật khẩu</a>
+					    <button type="submit" id="logout-button1" class="logout-button" >Đăng Xuất</button>
+					</form>
+	        	<% } 
+	        	%>
             </div>
         </div>
     </div>

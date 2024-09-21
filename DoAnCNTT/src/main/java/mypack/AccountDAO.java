@@ -28,6 +28,7 @@ public class AccountDAO {
         }
         return result;
     }
+    
     public boolean LogInAccount(Account acc) throws ClassNotFoundException {
         String SELECT_USERS_SQL = "SELECT * FROM account WHERE TK = ? AND MK = ?";
 
@@ -46,13 +47,14 @@ public class AccountDAO {
         }
         return result1;
     }
-    public boolean CheckTkDaTonTai(String tk) 
+    
+    public boolean CheckTkDaTonTai(Account acc) throws ClassNotFoundException
     {
         String SELECT_USER_BY_TK = "SELECT EXISTS (SELECT 1 FROM account WHERE TK = ?)";
 
         try (Connection connection = Dbconnection.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USER_BY_TK)) {
-            preparedStatement.setString(1, tk);
+            preparedStatement.setString(1, acc.getUsername());
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
@@ -64,41 +66,55 @@ public class AccountDAO {
         
         return false;
     }
+    
+    public boolean ChangePassword(Account acc) throws ClassNotFoundException
+    {
+    	String UPDATE_PASSWORD_QUERY = "UPDATE account SET MK = ? WHERE TK = ?";
+
+    	  try (Connection connection = Dbconnection.getConnection();
+    	       PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_PASSWORD_QUERY)){
+
+    	    preparedStatement.setString(1, acc.getPassword());
+    	    preparedStatement.setString(2, acc.getUsername());
+
+    	    int rowsAffected = preparedStatement.executeUpdate();
+
+    	    return rowsAffected > 0;
+    	    
+    	  } catch (SQLException e) {
+    	    printSQLException(e);
+    	    return false;
+    	  }
+    }
+    
     public boolean CheckDoDaiMK(String mk ,String nhaplaimk)
     {
     	if(mk.length() < 8 || nhaplaimk.length() < 8)
     		return false;
     	return true;
     }
+    
     public boolean CheckMKTrung(String mk,String nhaplaimk)
     {
     	if(mk.equals(nhaplaimk))
     		return true;
     	return false;
     }
+    
+    public boolean CheckMKMoiTrung(String mkCu,String mkMoi)
+    {
+    	if(mkCu.equals(mkMoi))
+    		return false;
+    	return true;
+    }
+    
     public boolean CheckNull(String tk ,String mk,String nhaplaimk)
     {
     	if(tk.isEmpty() && mk.isEmpty() && nhaplaimk.isEmpty())
     		return true;
     	return false;
     }
-    public boolean CheckRegister(String tk, String mk, String nhaplaimk) {
-        if (CheckDoDaiMK(mk, nhaplaimk) == true &&
-            CheckMKTrung(mk, nhaplaimk) == true &&
-            CheckNull(tk, mk, nhaplaimk) == true &&
-            CheckTkDaTonTai(tk) == true) 
-        {
-            return true;
-        }
-        else
-        	return false;
-    }
-    public boolean CheckLogin(String tk,String mk)
-    {
-    	if(CheckDoDaiMK(mk,"123456789") == true  && CheckNull(tk, mk,"123") == true)
-    		return true;
-    	return false;
-    }
+    
     private void printSQLException(SQLException ex) {
         for (Throwable e: ex) {
             if (e instanceof SQLException) {

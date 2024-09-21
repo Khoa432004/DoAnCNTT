@@ -51,7 +51,6 @@ public class AccountLogOutServlet extends HttpServlet {
 		AlertMessage = "Đăng xuất thành công";
 		request.getSession().setAttribute("Success", AlertMessage);
 		session.invalidate();
-		
 		response.sendRedirect("trangchu.jsp");
 	}
 

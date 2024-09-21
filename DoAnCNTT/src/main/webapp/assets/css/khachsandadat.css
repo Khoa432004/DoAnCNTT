@@ -26,17 +26,38 @@
   
 }
 
+.username-button,
+.changepass-button,
+.logout-button,
 .log-button,
-.reg-button {
-   padding: 4px 15px;
-   border: 1px solid white;
-   margin-left: 20px;
+.reg-button{
+	color: white;
+	text-decoration: none;
+	padding: 4px 15px;
+	border: 1px solid white;
+	margin-left: 10px;
 }
 
+.form-logout-button:hover
+.changepass-button:hover,
+.username-button:hover,
+.logout-button:hover,
 .log-button:hover,
 .reg-button:hover {
-   background-color: white;
-   color: #1F4456;
+	color: black;
+	text-decoration: none;
+	background-color: white;
+}
+
+.form-logout-button {
+  display: block;
+  margin: 0;
+  padding: 0; 
+}
+
+.logout-button {
+	text-decoration: none;
+	background-color: inherit;
 }
 
 /*--------Header----------*/

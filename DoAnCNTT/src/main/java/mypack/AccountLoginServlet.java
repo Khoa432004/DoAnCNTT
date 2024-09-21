@@ -53,12 +53,11 @@ public class AccountLoginServlet extends HttpServlet {
 		String AlertMessage = "";
 		if(accDao.CheckNull(TK, MK,MK))	
 		{	
-			AlertMessage = "Tài khoản hoặc mật khẩu không được để trống";
+			AlertMessage = "Tài khoản và mật khẩu không được để trống";
 			request.getSession().setAttribute("Fail", AlertMessage);
 		}
 		else if(!accDao.CheckDoDaiMK(MK, MK))
 		{
-			response.sendRedirect("uudai.jsp");
 			AlertMessage = "Độ dài mật khẩu phải lớn hơn 8";
 			request.getSession().setAttribute("Fail", AlertMessage);
 		}

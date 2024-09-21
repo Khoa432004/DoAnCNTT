@@ -26,16 +26,21 @@
 
 }
 
+#changepass-button1.changepass-button,
 #username-button1.username-button,
 #logout-button1.logout-button,
 #log-button1.log-button,
 #reg-button1.reg-button
-{
-   padding: 4px 15px;
-   border: 1px solid white;
-   margin-left: 10px;
+ {
+	text-decoration: none;
+	padding: 4px 15px;
+	border: 1px solid white;
+	margin-left: 10px;
 }
+
+
 .form-logout-button:hover
+#changepass-button1.changepass-button:hover,
 #username-button1.username-button:hover,
 #logout-button1.logout-button:hover,
 #log-button1.log-button:hover,
@@ -44,17 +49,21 @@
    background-color: white;
    color: #1F4456;
 }
-.form-logout-button {
+
+.form-logout-button 
+{
   display: block;
   margin: 0;
   padding: 0; 
 }
 
-.logout-button {
+.logout-button 
+{
 	background-color: inherit;
 }
 
-.logout-button:hover {
+.logout-button:hover 
+{
   
 }
 

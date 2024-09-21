@@ -29,6 +29,7 @@
 	            { %>
 	               	<form action="dangxuat" method="post" class="form-logout-button">
 	               		<a href="" class="username-button" id="username-button1" >${sessionScope.Username}</a>
+	               		<a href="doimatkhau.jsp" class="changepass-button" id="changepass-button1" >Đổi mật khẩu</a>
 					    <button type="submit" id="logout-button1" class="logout-button" >Đăng Xuất</button>
 					</form>
 	        	<% } 
@@ -66,7 +67,7 @@
                 <ul>
                     <li><a href="#diemden">Điểm đến</a></li>
                     <li><a href="uudai.jsp">Ưu đãi</a></li>
-                    <li><a href="">Đã Đặt</a></li><!-- khachsandadat.jsp -->
+                    <li><a href="khachsandadat.jsp">Đã Đặt</a></li>
                     <li><a href="help-center.jsp">Trợ giúp</a></li>
                     <a href="#" class="book-button">ĐẶT NGAY</a>
                 </ul>

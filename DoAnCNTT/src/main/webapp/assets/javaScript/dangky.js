@@ -5,15 +5,15 @@ const btn_reg = document.getElementById('btn-dangky');
 const btn_log = document.getElementById('btn-dangnhap');
 const inputElement = document.querySelectorAll('.input-row');
 
-btn_reg.addEventListener('click', function () {
+/*btn_reg.addEventListener('click', function () {
     Array.from(inputElement).map((element) =>
         element.classList.remove('success', 'error')
     )
 
     if (checkValidate()) {
-        /*alert('đăng ký thành công');*/
+        alert('đăng ký thành công');
     }
-});
+});*/
 
 function checkValidate() {
     let emailValue = emailElement.value;

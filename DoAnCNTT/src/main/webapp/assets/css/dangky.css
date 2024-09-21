@@ -30,29 +30,42 @@
 	font-style: italic;
 }
 
-.log-button {
-	padding: 4px 15px;
-	border: 1px solid white;
+.username-button,
+.changepass-button,
+.logout-button,
+.log-button,
+.reg-button{
 	color: white;
-	margin-left: 20px;
 	text-decoration: none;
-	font-weight: 500;
-}
-
-.reg-button {
 	padding: 4px 15px;
-	color: #1F4456;
-	background-color: white;
 	border: 1px solid white;
-	margin-left: 20px;
-	text-decoration: none;
-	font-weight: 500;
+	margin-left: 10px;
 }
 
-.log-button:hover {
-	color: #1F4456;
+.form-logout-button:hover
+.changepass-button:hover,
+.username-button:hover,
+.logout-button:hover,
+.log-button:hover,
+.reg-button:hover {
+	color: black;
+	text-decoration: none;
 	background-color: white;
-	border: 1px solid #1F4456;
+}
+
+.form-logout-button {
+  display: block;
+  margin: 0;
+  padding: 0; 
+}
+
+.logout-button {
+	text-decoration: none;
+	background-color: inherit;
+}
+
+.logout-button:hover {
+  
 }
 
 ul {
