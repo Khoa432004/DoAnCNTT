@@ -1,9 +1,12 @@
-package mypack;
+package Dao;
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
+import Connection.DBConnection;
+import Entity.Account;
 
 public class AccountDAO {
     DBConnection Dbconnection = new DBConnection(); 

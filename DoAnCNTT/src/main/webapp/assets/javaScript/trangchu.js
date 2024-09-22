@@ -28,7 +28,6 @@ btn_kiem.addEventListener('click', function () {
     }
 
 
-
    
 })
 

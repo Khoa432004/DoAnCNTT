@@ -37,7 +37,7 @@ const btn_thanhtoan = document.getElementById('thanhtoan');
 btn_thanhtoan.addEventListener('click',function(){
     if(checkValidate()){
         alert('Nhập thông tin thành công, tiếp tục đến thanh toán.');
-        window.location.href = 'paying.html';
+        window.location.href = 'paying.jsp';
     }
 
 })

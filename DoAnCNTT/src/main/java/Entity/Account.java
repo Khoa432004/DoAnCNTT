@@ -1,4 +1,4 @@
-package mypack;
+package Entity;
 
 public class Account {
 	private String username;
