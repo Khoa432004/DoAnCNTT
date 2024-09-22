@@ -13,6 +13,10 @@
 </head>
 
 <body>
+		<%	
+		    String currentURL = request.getRequestURL().toString();
+		    session.setAttribute("CurrentURL", currentURL);
+		%>
     <div id="header" style="background-color: #1F4456;">
         <div class="container">
             <div class="header-left">

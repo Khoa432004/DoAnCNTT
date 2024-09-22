@@ -77,9 +77,10 @@ public class AccountLoginServlet extends HttpServlet {
 			}
 			if(login)
 			{
-				response.sendRedirect("trangchu.jsp");
+				String currentURL = session.getAttribute("CurrentURL").toString();
 				AlertMessage = "Đăng nhập thành công";
 				request.getSession().setAttribute("Success", AlertMessage);
+				response.sendRedirect(currentURL);
 			}
 			else
 			{

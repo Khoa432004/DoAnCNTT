@@ -23,14 +23,31 @@
         <div id="header" style=" background: rgba(255, 255, 255, 0.1);">
             <div class="container">
                 <div class="header-left">
-                    <div class="num" style="color: white;">+84 3793 5332 420</div>
+                    <div class="num" style="color: white;">+84 773 914 830</div>
                 </div>
                 <div class="header-right">
-                    <a href="dangnhap.jsp" class="log-button">Đăng Nhập</a>
-                    <a href="dangky.jsp" class="reg-button">Đăng Ký</a>
+                    <% if (session.getAttribute("Username") == null) 
+	            	{ %>
+	              	<a href="dangnhap.jsp" class="log-button" id="log-button1">Đăng Nhập</a>
+	                <a href="dangky.jsp" class="reg-button" id="reg-button1">Đăng Ký</a> 
+	                
+		        	<% } 
+		            else 
+		            { %>
+	               	<form action="dangxuat" method="post" class="form-logout-button">
+	               		<a href="" class="username-button" id="username-button1" >${sessionScope.Username}</a>
+	               		<a href="doimatkhau.jsp" class="changepass-button" id="changepass-button1" >Đổi mật khẩu</a>
+					    <button type="submit" id="logout-button1" class="logout-button" >Đăng Xuất</button>
+					</form>
+		        	<% } 
+		        	%>
                 </div>
             </div>
         </div>
+		<%	
+		    String currentURL = request.getRequestURL().toString();
+		    session.setAttribute("CurrentURL", currentURL);
+		%>
         <div id="nav">
             <div class="container">
                 <div class="nav-left">
@@ -316,8 +333,11 @@
                                         <p class="giamoi">VND 1.000.000 </p>
                                         <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm
                                             thuế và phí</p>
-                                        <a href="VT-1.jsp" id="datngay1" class="btn btn-success mt-2">Đặt Phòng Ngay <i
-                                                style="color: white;" class="ti-angle-right"></i></a>
+                                        <a href="<%= (session.getAttribute("Username") == null) ? "dangnhap.jsp" : "VT-1.jsp" %>" 
+										   id="datngay2" 
+										   class="btn btn-success mt-2">
+										   Đặt Phòng Ngay <i style="color: white;" class="ti-angle-right"></i>
+										</a>
                                     </div>
                                 </div>
                             </div>
@@ -361,8 +381,11 @@
                                         <p class="giamoi">VND 700.000 </p>
                                         <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm
                                             thuế và phí</p>
-                                        <a href="VT-2.jsp" id="datngay2" class="btn btn-success mt-2">Đặt Phòng Ngay <i
-                                                style="color: white;" class="ti-angle-right"></i></a>
+                                        <a href="<%= (session.getAttribute("Username") == null) ? "dangnhap.jsp" : "VT-2.jsp" %>" 
+										   id="datngay2" 
+										   class="btn btn-success mt-2">
+										   Đặt Phòng Ngay <i style="color: white;" class="ti-angle-right"></i>
+										</a>
                                     </div>
                                 </div>
                             </div>
@@ -415,8 +438,11 @@
                                         <p class="giamoi">VND 2.200.000 </p>
                                         <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm
                                             thuế và phí</p>
-                                        <a href="VT-3.jsp" id="datngay3" class="btn btn-success mt-2">Đặt Phòng Ngay <i
-                                                style="color: white;" class="ti-angle-right"></i></a>
+                                        <a href="<%= (session.getAttribute("Username") == null) ? "dangnhap.jsp" : "VT-3.jsp" %>" 
+										   id="datngay2" 
+										   class="btn btn-success mt-2">
+										   Đặt Phòng Ngay <i style="color: white;" class="ti-angle-right"></i>
+										</a>
                                     </div>
                                 </div>
                             </div>
@@ -466,8 +492,11 @@
                                         <p class="giamoi">VND 650.000 </p>
                                         <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm
                                             thuế và phí</p>
-                                        <a href="VT-4.jsp" id="datngay4" class="btn btn-success mt-2">Đặt Phòng Ngay <i
-                                                style="color: white;" class="ti-angle-right"></i></a>
+                                        <a href="<%= (session.getAttribute("Username") == null) ? "dangnhap.jsp" : "VT-4.jsp" %>" 
+										   id="datngay2" 
+										   class="btn btn-success mt-2">
+										   Đặt Phòng Ngay <i style="color: white;" class="ti-angle-right"></i>
+										</a>
                                     </div>
                                 </div>
                             </div>
@@ -519,8 +548,11 @@
                                         <p class="giamoi">VND 1.780.000 </p>
                                         <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm
                                             thuế và phí</p>
-                                        <a href="VT-5.jsp" id="datngay5" class="btn btn-success mt-2">Đặt Phòng Ngay <i
-                                                style="color: white;" class="ti-angle-right"></i></a>
+                                        <a href="<%= (session.getAttribute("Username") == null) ? "dangnhap.jsp" : "VT-5.jsp" %>" 
+										   id="datngay2" 
+										   class="btn btn-success mt-2">
+										   Đặt Phòng Ngay <i style="color: white;" class="ti-angle-right"></i>
+										</a>
                                     </div>
                                 </div>
                             </div>

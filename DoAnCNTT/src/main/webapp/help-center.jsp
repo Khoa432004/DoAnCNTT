@@ -15,7 +15,7 @@
     <div id="header" style="background-color: #1F4456;">
         <div class="container">
             <div class="header-left">
-                <div class="num">+84 3793 5332 420</div>
+                <div class="num">+84 773 914 830</div>
             </div>
             <div class="header-right">
                 <% if (session.getAttribute("Username") == null) 
@@ -36,6 +36,11 @@
             </div>
         </div>
     </div>
+    
+    <%	
+		String currentURL = request.getRequestURL().toString();
+		session.setAttribute("CurrentURL", currentURL);
+	%>
     <div id="nav" style="background-color: rgb(240, 240, 240);">
         <div class="container">
             <div class="nav-left">

@@ -481,7 +481,7 @@
 
                                                     <button id="thanhtoan" type="button" class="btn btn-success   "
                                                         style="width: 70%;">Thanh Toán</button>
-                                                </div>
+                                                </div>                                              
                                             </div>
                                         </div>
                                     </div>
@@ -527,10 +527,6 @@
                                     <li>
                                         <p> <i class="ti-check"></i> <b style="color: green;">Miễn phí hủy</b></p>
                                     </li>
-
-
-
-
 
                                 </ul>
                             </div>
@@ -685,9 +681,29 @@
             </div>
         </div>
     </div>
+
     <script src="assets/javaScript/chitietphong.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
     <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
+
+                                                <%-- <!-- Add to session -->
+                                                <%@ page import="java.time.LocalDate" %>
+                                                <%@ page import="java.time.format.DateTimeFormatter" %>
+											    <%	
+											   		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+													String hoten = request.getParameter("hoten");
+												    String phone = request.getParameter("phone");
+												    LocalDate ngaynhan = LocalDate.parse(request.getParameter("ngaynhan"), formatter);
+												    LocalDate ngaytra = LocalDate.parse(request.getParameter("ngaytra"), formatter);
+												    String nguoilon = request.getParameter("nguoilon");
+												    String treem = request.getParameter("treem");
+													session.setAttribute("HoTen",hoten );
+													session.setAttribute("Phone",phone );
+													session.setAttribute("NgayNhan",ngaynhan );
+													session.setAttribute("NgayTra",ngaytra );
+													session.setAttribute("NguoiLon",nguoilon );
+													session.setAttribute("TreEm",treem );
+												%> --%>
