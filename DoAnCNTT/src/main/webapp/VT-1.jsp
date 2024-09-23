@@ -370,7 +370,8 @@
 	                                    <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);">1 đêm, 2 người
 	                                        lớn</p>
 	                                    <del class="giacu">VND 1.140.000 </del>
-	                                    <p class="giamoi">VND 1.000.000 </p>
+	                                    <!-- <p class="giamoi" id="giamoi">VND 1.000.000</p> -->
+	                                    <input class="giamoi" type="text" name="giamoi" value="VND 1.000.000">
 	                                    <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm thuế
 	                                        và phí</p>
 	                                    <br>
@@ -545,7 +546,8 @@
 	                                    <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);">1 đêm, 2 người
 	                                        lớn</p>
 	                                    <del class="giacu">VND 1.040.000 </del>
-	                                    <p class="giamoi">VND 700.000 </p>
+	                                    <!-- <p class="giamoi">VND 700.000 </p> -->
+	                                    <input class="giamoi" type="text" name="giamoi" value="VND 700.000">
 	                                    <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm thuế
 	                                        và phí</p>
 	                                    <br>
@@ -607,7 +609,8 @@
 	                                    <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);">1 đêm, 2 người
 	                                        lớn</p>
 	                                    <del class="giacu">VND 3.340.000 </del>
-	                                    <p class="giamoi">VND 2.780.000 </p>
+	                                    <!-- <p class="giamoi">VND 2.780.000 </p> -->
+	                                    <input class="giamoi" type="text" name="giamoi" value="VND 2.780.000">
 	                                    <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm thuế
 	                                        và phí</p>
 	                                    <br>
@@ -669,7 +672,8 @@
 	                                    <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);">1 đêm, 2 người
 	                                        lớn</p>
 	                                    <del class="giacu">VND 4.140.000 </del>
-	                                    <p class="giamoi">VND 3.780.000 </p>
+	                                    <!-- <p class="giamoi">VND 3.780.000 </p> -->
+	                                    <input class="giamoi" type="text" name="giamoi" value="VND 3.780.000">
 	                                    <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm thuế
 	                                        và phí</p>
 	                                    <br>

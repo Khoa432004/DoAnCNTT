@@ -18,14 +18,14 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class PaymentServlet
  */
-@WebServlet("/chitietphong")
-public class ChiTietPhongServlet extends HttpServlet {
+@WebServlet("/addchitietphong")
+public class RoomInformationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ChiTietPhongServlet() {
+    public RoomInformationServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -61,8 +61,7 @@ public class ChiTietPhongServlet extends HttpServlet {
         String ngaytraStr = request.getParameter("ngaytra");
         String nguoilon = request.getParameter("nguoilon");
         String treem = request.getParameter("treem");
-        //int giathuephong = Integer.parseInt( request.getParameter("giamoi").replaceAll("\\s+", "") );
-        int giathuephong = 1000000;
+        int giathuephong = Integer.parseInt( request.getParameter("giamoi").toString().replaceAll("[^0-9]", "") );
         // Biến để lưu trữ ngày nhận và ngày trả
         LocalDate ngaynhan = null;
         LocalDate ngaytra = null;

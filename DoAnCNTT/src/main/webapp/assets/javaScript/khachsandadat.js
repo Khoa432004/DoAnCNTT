@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function nhapVaoBang(){
     // tạo hàng mới
-    let row1 = table.insertRow();
+/*    let row1 = table.insertRow();
 
     
 
@@ -46,7 +46,7 @@ function nhapVaoBang(){
     cell_ngaynhan.innerText= ngaynhan;
     cell_ngaytra.innerText= ngaytra;
     cell_money.innerText = money+ " VND";
-    cell_Tong.innerText =  tongtien+"VND"
+    cell_Tong.innerText =  tongtien+"VND"*/
 
 }
 

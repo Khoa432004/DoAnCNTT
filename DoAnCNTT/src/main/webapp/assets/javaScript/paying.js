@@ -16,7 +16,7 @@ const mabaomatElement = document.getElementById('mabaomat');
 
 btn_thanhtoan.addEventListener('click',function(){
     if(checkValidate()){
-        window.location.href = 'khachsandadat.html';
+        window.location.href = 'khachsandadat.jsp';
     }
    
 })
@@ -47,7 +47,7 @@ localStorage.setItem('mahoadon',mahoadon);
 
 function nhapVaoBang(){
     // tạo hàng mới
-    let row1 = table.insertRow();
+/*    let row1 = table.insertRow();
     let row2 = table.insertRow();
     let row3 = table.insertRow();
     let row4 = table.insertRow();
@@ -83,7 +83,7 @@ function nhapVaoBang(){
     cell_nguolon.innerText = nguoilon +" Người";
     cell_treem.innerText = treem +" Người";
     cell_giaphong.innerText = money+ " VND";
-    cell_tongtien.innerText = tongtien+" VND"
+    cell_tongtien.innerText = tongtien+" VND"*/
 
 }
 

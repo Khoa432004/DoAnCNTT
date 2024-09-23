@@ -33,31 +33,6 @@
         </div>
     </div>
 	
-	<script>
-	    var maHoaDon = '<%= session.getAttribute("MaHoaDon") != null ? session.getAttribute("MaHoaDon") : "Không có" %>';
-	    var hoTen = '<%= session.getAttribute("HoTen") != null ? session.getAttribute("HoTen") : "Không có" %>';
-	    var phone = '<%= session.getAttribute("Phone") != null ? session.getAttribute("Phone") : "Không có" %>';
-	    var ngayNhan = '<%= session.getAttribute("NgayNhan") != null ? session.getAttribute("NgayNhan") : "Không có" %>';
-	    var ngayTra = '<%= session.getAttribute("NgayTra") != null ? session.getAttribute("NgayTra") : "Không có" %>';
-	    var soNgayThue = '<%= session.getAttribute("SoNgayThue") != null ? session.getAttribute("SoNgayThue") : "Không có" %>';
-	    var nguoiLon = '<%= session.getAttribute("NguoiLon") != null ? session.getAttribute("NguoiLon") : "Không có" %>';
-	    var treEm = '<%= session.getAttribute("TreEm") != null ? session.getAttribute("TreEm") : "Không có" %>';
-	    var giaThuePhong = '<%= session.getAttribute("GiaThuePhong") != null ? session.getAttribute("GiaThuePhong") : "Không có" %>';
-	    var tongTien = '<%= session.getAttribute("TongTien") != null ? session.getAttribute("TongTien") : "Không có" %>';
-	
-	    console.log("Mã hóa đơn: " + maHoaDon);
-	    console.log("Họ tên: " + hoTen);
-	    console.log("Điện thoại: " + phone);
-	    console.log("Ngày nhận: " + ngayNhan);
-	    console.log("Ngày trả: " + ngayTra);
-	    console.log("Số ngày thuê: " + soNgayThue);
-	    console.log("Người lớn: " + nguoiLon);
-	    console.log("Trẻ em: " + treEm);
-	    console.log("Giá thuê phòng: " + giaThuePhong);
-	    console.log("Tổng tiền: " + tongTien);
-	</script>
-
-
 
     <div class="container">
 
@@ -195,34 +170,34 @@
                 <div class="hoadon" style="display: flex;">
                     <table style="width: 250px;">
                         <tr>
-                            <td>Mã hóa đơn: </td>
+                            <td>Mã hóa đơn: ${sessionScope.MaHoaDon}</td>
                         </tr>
                         <tr>
-                            <td>Họ tên: </td>
+                            <td>Họ tên: ${sessionScope.HoTen}</td>
                         </tr>
                         <tr>
-                            <td>Số điện thoại: </td>
+                            <td>Số điện thoại: ${sessionScope.Phone}</td>
                         </tr>
                         <tr>
-                            <td>Ngày nhận phòng: </td>
+                            <td>Ngày nhận phòng: ${sessionScope.NgayNhan}</td>
                         </tr>
                         <tr>
-                            <td>Ngày trả phòng: </td>
+                            <td>Ngày trả phòng: ${sessionScope.NgayTra}</td>
                         </tr>
                         <tr>
-                            <td>Số ngày thuê: </td>
+                            <td>Số ngày thuê: ${sessionScope.SoNgayThue}</td>
                         </tr>
                         <tr>
-                            <td>Số người lớn: </td>
+                            <td>Số người lớn: ${sessionScope.NguoiLon}</td>
                         </tr>
                         <tr>
-                            <td>Số trẻ em: </td>
+                            <td>Số trẻ em: ${sessionScope.TreEm}</td>
                         </tr>
                         <tr>
-                            <td>Giá thuê phòng: </td>
+                            <td>Giá thuê phòng: ${sessionScope.GiaThuePhong}</td>
                         </tr>
                         <tr>
-                            <td>Tổng tiền: </td>
+                            <td>Tổng tiền: ${sessionScope.TongTien}</td>
                         </tr>
                     </table>
 
@@ -230,7 +205,29 @@
 
                     </table>
                 </div>
-
+			<script>
+			    var maHoaDon = '<%= session.getAttribute("MaHoaDon") != null ? session.getAttribute("MaHoaDon") : "Không có" %>';
+			    var hoTen = '<%= session.getAttribute("HoTen") != null ? session.getAttribute("HoTen") : "Không có" %>';
+			    var phone = '<%= session.getAttribute("Phone") != null ? session.getAttribute("Phone") : "Không có" %>';
+			    var ngayNhan = '<%= session.getAttribute("NgayNhan") != null ? session.getAttribute("NgayNhan") : "Không có" %>';
+			    var ngayTra = '<%= session.getAttribute("NgayTra") != null ? session.getAttribute("NgayTra") : "Không có" %>';
+			    var soNgayThue = '<%= session.getAttribute("SoNgayThue") != null ? session.getAttribute("SoNgayThue") : "Không có" %>';
+			    var nguoiLon = '<%= session.getAttribute("NguoiLon") != null ? session.getAttribute("NguoiLon") : "Không có" %>';
+			    var treEm = '<%= session.getAttribute("TreEm") != null ? session.getAttribute("TreEm") : "Không có" %>';
+			    var giaThuePhong = '<%= session.getAttribute("GiaThuePhong") != null ? session.getAttribute("GiaThuePhong") : "Không có" %>';
+			    var tongTien = '<%= session.getAttribute("TongTien") != null ? session.getAttribute("TongTien") : "Không có" %>';
+			
+			    console.log("Mã hóa đơn: " + maHoaDon);
+			    console.log("Họ tên: " + hoTen);
+			    console.log("Điện thoại: " + phone);
+			    console.log("Ngày nhận: " + ngayNhan);
+			    console.log("Ngày trả: " + ngayTra);
+			    console.log("Số ngày thuê: " + soNgayThue);
+			    console.log("Người lớn: " + nguoiLon);
+			    console.log("Trẻ em: " + treEm);
+			    console.log("Giá thuê phòng: " + giaThuePhong);
+			    console.log("Tổng tiền: " + tongTien);
+			</script>
             </div>
         </div>
 
