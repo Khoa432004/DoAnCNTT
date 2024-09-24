@@ -71,7 +71,7 @@
                 <ul>
                     <li><a href="#diemden">Điểm đến</a></li>
                     <li><a href="uudai.jsp">Ưu đãi</a></li>
-                    <li><a href="khachsandadat.jsp">Đã Đặt</a></li>
+                    <li><a href="<%= (session.getAttribute("Username") == null) ? "dangnhap.jsp" : "khachsandadat.jsp" %>">Đã Đặt</a></li>
                     <li><a href="help-center.jsp">Trợ giúp</a></li>
                     <a href="#" class="book-button">ĐẶT NGAY</a>
                 </ul>
@@ -83,39 +83,41 @@
             <h1>LUXURY HOTEL & BEST RESORT</h1>
             <a href="trangchu.jsp" class="btn">BOOK NOW</a>
         </div>
-        <div class="box-pop">
-            <div class="pop" style="width: 280px; position: relative;">
-                <span id="tooltiptext"
-                    style="position: absolute; bottom: 67px; left:0px; background-color: #EBEBEB; border-radius: 5px; 
-                    padding: 10px; display: none; width: 100%;color: rgb(117, 117, 117);transition: opacity 0.5s ease;">
-                    VT - Vũng Tàu
-                    <br>
-                    TPHCM - Thành Phố Hồ Chí Minh
-                    <br>
-                    DN - Đà Nẵng
-                    <br>
-                    HN - Hà Nội
-                    <br>
-                    Hue - Huế
-                </span>
-                <p>Địa điểm <i class="ti-location-pin" style="color: #757575;"></i></p>
-                <input type="search" autocomplete="off" id="destination"
-                    placeholder="Thành phố, khu vực, tên khách sạn, địa diểm gần đó">
-            </div>
-            <div class="pop">
-                <p>Ngày nhận phòng</p>
-                <input type="date" id="date-start" placeholder="Chọn ngày">
-            </div>
-            <div class="pop">
-                <p>Ngày trả phòng</p>
-                <input type="date" id="date-end" placeholder="Chọn ngày">
-            </div>
-            <div class="pop">
-                <p>Số người <i class="ti-user"></i></p>
-                <input type="number" id="people-number" min="1" value="1" placeholder="Nhập số người">
-            </div>
-            <input type="button" id="find-button" value="Tìm kiếm" class="pop btn  btn-danger ">
-        </div>
+        <form action="SearchServlet" method="post" class="form mt-3">
+	        <div class="box-pop">
+	            <div class="pop" style="width: 280px; position: relative;">
+	                <span id="tooltiptext"
+	                    style="position: absolute; bottom: 67px; left:0px; background-color: #EBEBEB; border-radius: 5px; 
+	                    padding: 10px; display: none; width: 100%;color: rgb(117, 117, 117);transition: opacity 0.5s ease;">
+	                    VT - Vũng Tàu
+	                    <br>
+	                    TPHCM - Thành Phố Hồ Chí Minh
+	                    <br>
+	                    DN - Đà Nẵng
+	                    <br>
+	                    HN - Hà Nội
+	                    <br>
+	                    Hue - Huế
+	                </span>
+	                <p>Địa điểm <i class="ti-location-pin" style="color: #757575;"></i></p>
+	                <input type="search" name="diadiem" autocomplete="off" id="destination"
+	                    placeholder="Thành phố, khu vực, tên khách sạn, địa diểm gần đó">
+	            </div>
+	            <div class="pop">
+	                <p>Ngày nhận phòng</p>
+	                <input type="date" id="date-start" placeholder="Chọn ngày">
+	            </div>
+	            <div class="pop">
+	                <p>Ngày trả phòng</p>
+	                <input type="date" id="date-end" placeholder="Chọn ngày">
+	            </div>
+	            <div class="pop">
+	                <p>Số người <i class="ti-user"></i></p>
+	                <input type="number" id="people-number" min="1" value="1" placeholder="Nhập số người">
+	            </div>
+	            <input type="submit" id="find-button" value="Tìm kiếm" class="pop btn  btn-danger ">
+	        </div>
+        </form>
     </div>
     <div id="content">
         <div class="container" style="background-color: #F0EEED;">

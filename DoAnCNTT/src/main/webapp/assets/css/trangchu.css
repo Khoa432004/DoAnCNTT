@@ -203,7 +203,7 @@ input {
    color: rgb(117, 117, 117);
 }
 
-input[type="button"],
+input[type="submit"],
 .frame {
    background-color: #AB8A62;
    color: white;
