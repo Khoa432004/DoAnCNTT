@@ -1,6 +1,8 @@
 package Controller;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
@@ -14,6 +16,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import Connection.DBConnection;
+import Dao.RoomTypeDAO;
 
 /**
  * Servlet implementation class PaymentServlet
@@ -61,7 +66,7 @@ public class RoomInformationServlet extends HttpServlet {
         String ngaytraStr = request.getParameter("ngaytra");
         String nguoilon = request.getParameter("nguoilon");
         String treem = request.getParameter("treem");
-        int giathuephong = Integer.parseInt( request.getParameter("giamoi").toString().replaceAll("[^0-9]", "") );
+
         // Biến để lưu trữ ngày nhận và ngày trả
         LocalDate ngaynhan = null;
         LocalDate ngaytra = null;
@@ -98,6 +103,11 @@ public class RoomInformationServlet extends HttpServlet {
 
         // Thiết lập các thuộc tính phiên
         HttpSession session = request.getSession();
+        
+        String roomtype = session.getAttribute("MaLoaiPhong").toString();
+        RoomTypeDAO roomTypeDAO = new RoomTypeDAO();
+        int giathuephong = roomTypeDAO.getRoomPrice(roomtype);
+        
         session.setAttribute("MaHoaDon", mahoadon);
         session.setAttribute("HoTen", hoten);
         session.setAttribute("Phone", phone);
@@ -111,5 +121,6 @@ public class RoomInformationServlet extends HttpServlet {
         // Chuyển hướng sau khi xử lý thành công
         response.sendRedirect("paying.jsp");
     }
+
 
 }
