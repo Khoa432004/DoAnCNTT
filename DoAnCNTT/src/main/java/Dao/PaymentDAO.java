@@ -4,9 +4,9 @@ import Connection.DBConnection;
 import Entity.Payment;
 
 import java.sql.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PaymentDAO {
 	DBConnection Dbconnection = new DBConnection();
@@ -41,6 +41,7 @@ public class PaymentDAO {
         return result; // Return number of affected rows
     }
 
+	
     // Method to print SQL exceptions
     private void printSQLException(SQLException ex) {
         for (Throwable t : ex) {

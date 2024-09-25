@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html lang="en">
 
@@ -73,22 +74,30 @@
                 <td>Mã hóa đơn</td>
                 <td>Họ tên</td>
                 <td>Số điện thoại</td>
+                <td>Mã phòng</td>
+                <td>Tên phòng</td>
+                <td>Ví trí</td>
                 <td>Ngày nhận phòng</td>
                 <td>Ngày trả phòng</td>
                 <td>Giá thuê phòng</td>
                 <td>Tổng tiền</td>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
+			<c:forEach var="HotelBooked" items="${HotelBookedList}">
+			    <tr>
+			        <td>${HotelBooked.maHoaDon}</td>  <!-- Use lowercase for property name -->
+			        <td>${HotelBooked.hoTen}</td>
+			        <td>${HotelBooked.SDT}</td>
+			        <td>${HotelBooked.maPhong}</td>
+			        <td>${HotelBooked.tenPhong}</td>
+			        <td>${HotelBooked.viTri}</td>
+			        <td>${HotelBooked.ngayNhanPhong}</td>
+			        <td>${HotelBooked.ngayTraPhong}</td>
+			        <td>${HotelBooked.giaThuePhong}</td>
+			        <td>${HotelBooked.tongTien}</td>
+			    </tr>
+			</c:forEach>
 
-            </tr>
-        </table>
+		</table>
     </div>
 
 
