@@ -50,7 +50,7 @@
                 <ul>
                     <li><a href="trangchu.jsp">Điểm đến</a></li>
                     <li><a href="uudai.jsp">Ưu đãi</a></li>
-                    <li><a href="khachsandadat.jsp">Đã Đặt</a></li>
+                    <li><a href="<%= (session.getAttribute("Username") == null) ? "dangnhap.jsp" : "HotelBookedServlet" %>">Đã Đặt</a></li>
                     <li><a href="#">Trợ giúp</a></li>
                     <a href="#" class="book-button">ĐẶT NGAY</a>
                 </ul>

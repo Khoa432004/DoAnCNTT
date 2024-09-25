@@ -32,7 +32,7 @@
                 <ul>
                     <li><a href="trangchu.jsp">Điểm đến</a></li>
                     <li><a href="#">Ưu đãi</a></li>
-                    <li><a href="khachsandadat.jsp">Đã Đặt</a></li>
+                    <li><a href="<%= (session.getAttribute("Username") == null) ? "dangnhap.jsp" : "HotelBookedServlet" %>">Đã Đặt</a></li>
                     <li><a href="help-center.jsp">Trợ giúp</a></li>
                     <a href="#" class="book-button">ĐẶT NGAY</a>
                 </ul>
