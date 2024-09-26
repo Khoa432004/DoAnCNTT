@@ -119,51 +119,59 @@
 /*--------Nav----------*/
 
 
- /*Table*/
-
- .table-da-book{
-   width: 100%;
-   display: flex;
-   justify-content: center;
-   margin-top: 50px;
- }
- table{
-   width: 98%;
-   border-collapse: collapse;
-
-   
- }
- table tr{
-
-   padding: 0;
-   margin: 0;
-   
- }
- 
- 
- table tr td{
-   
-   color: #1F4456;
-   border: 2px solid #1F4456;
-   text-align: center;
-   padding: 5px;
-   margin: 0;
-   font-weight: 600;
-   
- }
- 
-.chitietdadat-button  {
-	border: none;
-	background: none;
-	cursor: pointer;
-	text-decoration: none;
-	color: blue;
-	font-weight: normal;
-	color: blue;
-	text-decoration: none;
+.left-image {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 20vw;
+	height: auto;
 }
 
-.chitietdadat-button:hover {
-  color: #ADD8E6;
+.right-image {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	transform: translateY(-50%);
+	width: 20vw;
+	height: auto;
 }
- 
+
+.center-image {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100vw;
+	height: 250px;
+	object-fit: cover; 
+}
+
+
+.thongtin {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: auto;
+    text-align: left;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width : 100vw;
+}
+
+.thongtin table {
+    border-collapse: collapse;
+    width: 250px;
+}
+
+.thongtin td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}

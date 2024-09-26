@@ -58,7 +58,7 @@
                     <ul>
                         <li><a href="#" style="color: white;">Điểm đến</a></li>
                         <li><a href="uudai.jsp" style="color: white;">Ưu đãi</a></li>
-                        <li><a href="khachsandadat.jsp" style="color: white;">Đã Đặt</a></li>
+                        <li><a href="<%= (session.getAttribute("Username") == null) ? "dangnhap.jsp" : "HotelBookedServlet" %>" style="color: white;" >Đã Đặt</a></li>
                         <li><a href="help-center.jsp" style="color: white;">Trợ giúp</a></li>
                         <a href="#" class="book-button" style="color: white;">ĐẶT NGAY</a>
                     </ul>

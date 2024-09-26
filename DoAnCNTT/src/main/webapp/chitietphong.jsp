@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html lang="en">
 
@@ -11,7 +10,7 @@
     <link rel="icon" href="assets/img/logo.png" type="image/png">
     <link rel="stylesheet" href="assets/icon/themify-icons/themify-icons.css">
 
-    <link rel="stylesheet" href="assets/css/khachsandadat.css">
+    <link rel="stylesheet" href="assets/css/xemchitiet.css">
 
 </head>
 
@@ -44,6 +43,7 @@
 		String currentURL = request.getRequestURL().toString();
 		session.setAttribute("CurrentURL", currentURL);
 	%>
+	
     <div id="nav" style="background-color: rgb(240, 240, 240);">
         <div class="container">
             <div class="nav-left">
@@ -61,51 +61,46 @@
         </div>
     </div>
 
-    <div class="title-khachsandadat "
-        style=" height: 250px; display: flex;justify-content: center;align-items:center;  background-image: url(assets/images/resort.jpg);">
-        <h1 style="color: #ace3ff;">DANH SÁCH CÁC KHÁCH SẠN ĐÃ ĐẶT</h1>
-    </div>
-
-    <div class="table-da-book table ">
-
-	    <table id="table-book" style="color: black;">
-	        <tr>
-	            <td>Mã hóa đơn</td>
-	            <td>Họ tên</td>
-	            <td>Số điện thoại</td>
-	            <td>Mã phòng</td>
-	            <td>Tên phòng</td>
-	            <td>Ví trí</td>
-	            <td>Ngày nhận phòng</td>
-	            <td>Ngày trả phòng</td>
-	            <td>Giá thuê phòng</td>
-	            <td>Tổng tiền</td>
-	            <td></td>
-	        </tr>
-	        <c:forEach var="HotelBooked" items="${HotelBookedList}">
-	            <form action="HotelInformationBooked" method="post" class="form-information">
-	                <input class="check-infor" type="hidden" name="MaHoaDon" id="MaHoaDon" value="${HotelBooked.maHoaDon}">
-	                <tr>
-	                    <td>${HotelBooked.maHoaDon}</td>
-	                    <td>${HotelBooked.hoTen}</td>
-	                    <td>${HotelBooked.SDT}</td>
-	                    <td>${HotelBooked.maPhong}</td>
-	                    <td>${HotelBooked.tenPhong}</td>
-	                    <td>${HotelBooked.viTri}</td>
-	                    <td>${HotelBooked.ngayNhanPhong}</td>
-	                    <td>${HotelBooked.ngayTraPhong}</td>
-	                    <td>${HotelBooked.giaThuePhong}</td>
-	                    <td>${HotelBooked.tongTien}</td>
-	                    <td><button type="submit" class="chitietdadat-button" id="chitietdadat-button1">Chi tiết</button></td>
-	                </tr>
-	            </form>
-	        </c:forEach>
-	
-	    </table>
+	<img src="assets/img/left.webp" alt="Left Image" class="left-image">
+    <img src="assets/img/right.webp" alt="Right Image" class="right-image">
+    <div class="image-container">
+    	<img src="assets/img/VT-1.4.jpg" alt="Center Image" class="center-image">
 	</div>
-
-
-    <footer>
+	<div class="thongtin" style="display: flex;">
+		<table style="width: 250px ;height: 250px" >
+			<tr>
+				<td>Mã hóa đơn: </td>
+			</tr>
+			<tr>
+				<td>Họ tên: </td>
+			</tr>
+			<tr>
+				<td>Số điện thoại:</td>
+			</tr>
+			<tr>
+				<td>Ngày nhận phòng: </td>
+			</tr>
+			<tr>
+				<td>Ngày trả phòng: </td>
+			</tr>
+			<tr>
+				<td>Số ngày thuê: </td>
+			</tr>
+			<tr>
+				<td>Số người lớn: </td>
+			</tr>
+			<tr>
+				<td>Số trẻ em: </td>
+			</tr>
+			<tr>
+				<td>Giá thuê phòng: </td>
+			</tr>
+			<tr>
+				<td>Tổng tiền: </td>
+			</tr>
+		</table>
+	</div>
+	<footer>
         <div class="coop"
             style="display: flex; flex-direction: column; text-align: center;padding: 20px; margin-top: 300px;">
             <p style="color: #6b6b6b; font-size: 12px;">Các nhãn hàng đã hợp tác</p>
@@ -147,7 +142,7 @@
 
     </footer>
 
-    <script src="assets/javaScript/khachsandadat.js"></script>
+    <script src=""></script>
 </body>
 
 </html>

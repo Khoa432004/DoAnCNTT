@@ -41,7 +41,7 @@ CREATE TABLE payment (
 INSERT INTO roomtype (MaLoaiPhong, ViTri,Gia,TenLoaiPhong) VALUES ('LP01', 'VT1-1',1000000,"Phòng Giường Đôi Có Ban Công");
 INSERT INTO roomtype (MaLoaiPhong, ViTri,Gia,TenLoaiPhong) VALUES ('LP02', 'VT1-2',700000,"Phòng Giường Đôi có Ban công và Nhìn ra Biển");
 INSERT INTO roomtype (MaLoaiPhong, ViTri,Gia,TenLoaiPhong) VALUES ('LP03', 'VT1-3',2780000,"Studio Superior");
-INSERT INTO roomtype (MaLoaiPhong, ViTri,Gia,TenLoaiPhong) VALUES ('LP04', 'VT1-3',3780000,"Phòng 4 Người Nhìn Ra Biển");
+INSERT INTO roomtype (MaLoaiPhong, ViTri,Gia,TenLoaiPhong) VALUES ('LP04', 'VT1-4',3780000,"Phòng 4 Người Nhìn Ra Biển");
 
 
 INSERT INTO room (MaPhong, MaLoaiPhong) VALUES ('MP01', 'LP01');
