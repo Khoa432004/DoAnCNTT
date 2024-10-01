@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Booking_hotel/TrangChu</title>
     <link rel="icon" href="assets/img/logo.png" type="image/png">
+    
     <link rel="stylesheet" href="assets/icon/themify-icons/themify-icons.css">
 
     <link rel="stylesheet" href="assets/css/xemchitiet.css">
@@ -66,7 +67,8 @@
     <div class="image-container">
     	<img src="assets/img/VT-1.4.jpg" alt="Center Image" class="center-image">
 	</div>
-	<div class="thongtin" style="display: flex;">
+	<div class="thongtin" style="display: flex; color :black;">
+	    <h2>Thông tin của phòng</h2>
 		<table style="width: 250px ;height: 250px" >
 			<tr>
 				<td>Mã hóa đơn: </td>

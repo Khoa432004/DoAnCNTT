@@ -5,7 +5,6 @@
    list-style-type: none;
    font-family: Arial, Helvetica, sans-serif;
    text-decoration: none;
-   color: white;
 }
 
 /*--------Header----------*/
@@ -168,8 +167,8 @@
 .thongtin table {
     border-collapse: collapse;
     width: 250px;
+    
 }
-
 .thongtin td {
     padding: 8px;
     border: 1px solid #ddd;
