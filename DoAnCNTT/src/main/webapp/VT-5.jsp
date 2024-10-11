@@ -331,7 +331,7 @@
                 <h4 style="margin-top: 30px;">Những phòng còn trống tại khách sạn:</h4>
                 <img style="width: 99%;" src="assets/img/chitietphong.png" alt="">
                 <!-----itemt-1----->
-
+				<form action="addmaloaiphong" method="post" class="form-roomtype-LP15">
                 <div class="itemt-1 row mt-4" id="phongtrong">
 
                     <div class="itemt-anh col-sm-4">
@@ -382,127 +382,13 @@
                                     <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm thuế
                                         và phí</p>
                                     <br>
+                                    <input class="form-control" type="text" name="MaLoaiPhong"
+											id="MaLoaiPhong" value="LP15" style="display: none;">
                                     <!-- Modal trigger button -->
                                     <button type="button" class="btn-datphong btn btn-primary  btn-success mt-2"
                                         data-bs-toggle="modal" data-bs-target="#modalId" data-money="1000000">
                                         Đặt Phòng Ngay<i style="color: white;" class="ti-angle-right"></i>
                                     </button>
-
-                                    <!-- Modal Body -->
-                                    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-                                    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static"
-                                        data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl"
-                                            role="document">
-                                            <div class="modal-content">
-
-                                                <!--modal-header-->
-                                                <div class="modal-header">
-                                                    <h3 class="modal-title" id="modalTitleId"
-                                                        style="margin-left: 38%;  ">
-                                                        Thông Tin Đặt Phòng
-                                                    </h3>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-
-                                                <!--modal-body-->
-                                                <div class="modal-body">
-
-
-                                                    <!--Ho ten-->
-                                                    <div class="input-row row mt-2">
-                                                        <div class="col-3 "><label class="form-label " for="hoten">Họ
-                                                                tên</label></div>
-                                                        <div class="col  ">
-                                                            <input class="form-control" type="text" name="hoten"
-                                                                id="hoten">
-                                                            <span style="color: red; float: left;">*</span>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!--Số điện thoại-->
-                                                    <div class="input-row row mt-2">
-                                                        <div class="col-3 "><label class="form-label " for="phone">Số
-                                                                điện thoại</label></div>
-                                                        <div class="col  ">
-                                                            <input class="form-control" type="text" name="phone"
-                                                                id="phone">
-                                                            <span style="color: red;float: left;">*</span>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!--Ngày nhận phòng-->
-
-                                                    <div class="input-row row mt-2">
-                                                        <div class="col-3 "><label class="form-label "
-                                                                for="ngaynhan">Ngày nhận phòng</label></div>
-                                                        <div class="col  ">
-                                                            <input class="form-control" type="date" name="ngaynhan"
-                                                                id="ngaynhan">
-                                                            <span style="color: red;float: left;">*</span>
-                                                        </div>
-
-                                                    </div>
-
-                                                    <!--Ngày trả phòng-->
-
-                                                    <div class="input-row row mt-2">
-                                                        <div class="col-3 "><label class="form-label "
-                                                                for="ngaytra">Ngày trả phòng</label></div>
-                                                        <div class="col  ">
-                                                            <input class="form-control" type="date" name="ngaytra"
-                                                                id="ngaytra">
-                                                            <span style="color: red;float: left;">*</span>
-                                                        </div>
-
-                                                    </div>
-                                                    <!--Số người lớn-->
-
-                                                    <div class="input-row row mt-2">
-                                                        <div class="col-3 "><label class="form-label " for="nguoilon">Số
-                                                                người lớn</label></div>
-                                                        <div class="col  ">
-                                                            <input style="width: 110px; padding-left: 10px;"
-                                                                class="form-control" type="number" name="nguoilon"
-                                                                id="nguoilon" placeholder="số người" min="1">
-                                                            <span style="color: red;float: left;">*</span>
-                                                        </div>
-
-                                                    </div>
-                                                    <!--Số trẻ em-->
-
-
-
-                                                    <div class="input-row row mt-2">
-                                                        <div class="col-3 "><label class="form-label " for="treem">Số
-                                                                trẻ em</label></div>
-                                                        <div class="col  ">
-                                                            <input style="width: 110px; padding-left: 10px;"
-                                                                class="form-control" type="number" name="treem"
-                                                                id="treem" placeholder="số người" min="0">
-                                                            <span style="color: red;float: left;">*</span>
-                                                        </div>
-
-                                                    </div>
-
-
-
-                                                </div>
-
-
-                                                <!--modal-footer-->
-                                                <div class="modal-footer d-flex justify-content-center ">
-
-                                                    <button id="thanhtoan" type="button" class="btn btn-success   "
-                                                        style="width: 70%;">Thanh Toán</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                     <!-- Optional: Place to the bottom of scripts -->
                                     <script>
@@ -520,8 +406,9 @@
 
                     </div>
                 </div>
+                </form>
                 <!-----itemt-2----->
-
+				<form action="addmaloaiphong" method="post" class="form-roomtype-LP16">
                 <div class="itemt-1 row mt-2">
 
                     <div class="itemt-anh col-sm-4">
@@ -569,6 +456,8 @@
                                     <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm thuế
                                         và phí</p>
                                     <br>
+                                    <input class="form-control" type="text" name="MaLoaiPhong"
+											id="MaLoaiPhong" value="LP16" style="display: none;">
                                     <!-- Modal trigger button -->
                                     <button type="button" class="btn-datphong btn btn-primary  btn-success mt-2"
                                         data-bs-toggle="modal" data-bs-target="#modalId" data-money="700000">
@@ -583,9 +472,9 @@
 
                     </div>
                 </div>
-
+				</form>
                 <!-----itemt-3----->
-
+				<form action="addmaloaiphong" method="post" class="form-roomtype-LP17">
                 <div class="itemt-1 row mt-2">
 
                     <div class="itemt-anh col-sm-4">
@@ -635,6 +524,8 @@
                                     <p style="width: 100%; font-size: 11px; color: rgb(100, 100, 100);;">Đã bao gồm thuế
                                         và phí</p>
                                     <br>
+                                    <input class="form-control" type="text" name="MaLoaiPhong"
+											id="MaLoaiPhong" value="LP17" style="display: none;">
                                     <!-- Modal trigger button -->
                                     <button type="button" class="btn-datphong btn btn-primary  btn-success mt-2"
                                         data-bs-toggle="modal" data-bs-target="#modalId" data-money="2780000">
@@ -649,6 +540,119 @@
 
                     </div>
                 </div>
+                </form>
+                
+                <form action="addchitietphong" method="post" class="form-payment">	
+					<div class="modal fade" id="modalId" tabindex="-1"
+						data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+						aria-labelledby="modalTitleId" aria-hidden="true">
+						<div
+							class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl"
+							role="document">
+							<div class="modal-content">
+	
+								<!--modal-header-->
+								<div class="modal-header">
+									<h3 class="modal-title" id="modalTitleId"
+										style="margin-left: 38%;">Thông Tin Đặt Phòng</h3>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<!--modal-body-->
+								<div class="modal-body">
+	
+	
+									<!--Ho ten-->
+									<div class="input-row row mt-2">
+										<div class="col-3 ">
+											<label class="form-label " for="hoten">Họ tên</label>
+										</div>
+										<div class="col  ">
+											<input class="form-control" type="text" name="hoten"
+												id="hoten"> <span style="color: red; float: left;">*</span>
+										</div>
+	
+									</div>
+	
+									<!--Số điện thoại-->
+									<div class="input-row row mt-2">
+										<div class="col-3 ">
+											<label class="form-label " for="phone">Số điện thoại</label>
+										</div>
+										<div class="col  ">
+											<input class="form-control" type="text" name="phone"
+												id="phone"> <span style="color: red; float: left;">*</span>
+										</div>
+	
+									</div>
+	
+									<!--Ngày nhận phòng-->
+	
+									<div class="input-row row mt-2">
+										<div class="col-3 ">
+											<label class="form-label " for="ngaynhan">Ngày nhận
+												phòng</label>
+										</div>
+										<div class="col  ">
+											<input class="form-control" type="date" name="ngaynhan"
+												id="ngaynhan"> <span style="color: red; float: left;">*</span>
+										</div>
+	
+									</div>
+	
+									<!--Ngày trả phòng-->
+	
+									<div class="input-row row mt-2">
+										<div class="col-3 ">
+											<label class="form-label " for="ngaytra">Ngày trả
+												phòng</label>
+										</div>
+										<div class="col  ">
+											<input class="form-control" type="date" name="ngaytra"
+												id="ngaytra"> <span style="color: red; float: left;">*</span>
+										</div>
+	
+									</div>
+									<!--Số người lớn-->
+	
+									<div class="input-row row mt-2">
+										<div class="col-3 ">
+											<label class="form-label " for="nguoilon">Số người lớn</label>
+										</div>
+										<div class="col  ">
+											<input style="width: 110px; padding-left: 10px;"
+												class="form-control" type="number" name="nguoilon"
+												id="nguoilon" placeholder="số người" min="1"> <span
+												style="color: red; float: left;">*</span>
+										</div>
+	
+									</div>
+									<!--Số trẻ em-->
+	
+									<div class="input-row row mt-2">
+										<div class="col-3 ">
+											<label class="form-label " for="treem">Số trẻ em</label>
+										</div>
+										<div class="col  ">
+											<input style="width: 110px; padding-left: 10px;"
+												class="form-control" type="number" name="treem" id="treem"
+												placeholder="số người" min="0"> <span
+												style="color: red; float: left;">*</span>
+										</div>
+	
+									</div>
+								</div>
+	
+								<!--modal-footer-->
+								<div class="modal-footer d-flex justify-content-center ">
+	
+									<button id="thanhtoan" type="submit" class="btn btn-success   "
+										style="width: 70%;">Thanh Toán</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
             </div>
         </div>
     </div>
