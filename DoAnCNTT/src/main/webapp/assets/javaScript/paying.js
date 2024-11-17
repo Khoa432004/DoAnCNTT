@@ -1,6 +1,5 @@
 const table = document.getElementById('table');
 const hoten = localStorage.getItem('hoten');
-const phone = localStorage.getItem('phone');
 const ngaynhan = localStorage.getItem('ngaynhan');
 const ngaytra = localStorage.getItem('ngaytra');
 const songaythue = localStorage.getItem('songaythue');
@@ -13,14 +12,14 @@ const tentheElement = document.getElementById('tenthe');
 const sotheElement = document.getElementById('sothe');
 const mabaomatElement = document.getElementById('mabaomat');
 
-
+/*
 btn_thanhtoan.addEventListener('click',function(){
     if(checkValidate()){
         window.location.href = 'khachsandadat.jsp';
     }
    
 })
-
+*/
 
 
 const tongtien = parseInt(songaythue)*parseInt(money);
@@ -87,7 +86,7 @@ function nhapVaoBang(){
 
 }
 
-
+/*
 function checkValidate(){
     
 
@@ -138,11 +137,8 @@ function checkValidate(){
 
 return check;
 
-
-
-
 }
-
+*/
 
 function setSuccess(element){
     let elementParent = element.parentNode;
@@ -154,4 +150,73 @@ function setErorr(element,message){
     elementParent.querySelector('span').innerText=message;
 }
 
+// Function to apply discount and update total price
+function applyDiscount() {
+    if (giaTriUuDai > 0 && loaiUuDai > 0) {
+        let discountedPrice = tongTien;
 
+        if (loaiUuDai === 1) { // Giảm theo %
+            discountedPrice = tongTien - (tongTien * giaTriUuDai / 100);
+        } else if (loaiUuDai === 2) { // Giảm theo số tiền cố định
+            discountedPrice = tongTien - giaTriUuDai;
+        }
+
+        // Cập nhật giá trị tổng tiền sau khi giảm giá lên trang
+        document.getElementById("tongTienSauUuDai").innerText = discountedPrice.toFixed(2);
+    } else {
+        document.getElementById("tongTienSauUuDai").innerText = tongTien.toFixed(2);
+    }
+}
+
+// Gọi hàm để áp dụng ưu đãi sau khi trang được load
+window.onload = function() {
+    applyDiscount();
+};
+window.onload = function() {
+    var xhr = new XMLHttpRequest();
+
+    xhr.open("POST", "ApplyUuDaiServlet", true);
+
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            console.log("Yêu cầu gửi thành công!");
+        } else {
+            console.log("Có lỗi khi gửi yêu cầu.");
+        }
+    };
+
+    xhr.send();
+};
+/*
+document.getElementById("btn-thanhtoan").addEventListener("click", function(event) {
+    event.preventDefault();
+
+    var maHoaDon = "<%= session.getAttribute('MaHoaDon') %>";
+    var tongTienGoc = parseFloat("<%= session.getAttribute('TongTien') %>");
+	 
+    var giaTriUuDai = parseFloat(document.getElementById('maUuDai').selectedOptions[0].getAttribute('data-giaTri'));
+    var loaiUuDai = document.getElementById('maUuDai').selectedOptions[0].getAttribute('data-loaiUuDai');
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "UpdateTongTienServlet", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            window.location.href = "khachsandadat.jsp";  // Chuyển hướng sau khi cập nhật
+        }
+    };
+    xhr.send(`MaHoaDon=${maHoaDon}&TongTienGoc=${tongTienGoc}&giaTriUuDai=${giaTriUuDai}&loaiUuDai=${loaiUuDai}`);
+});
+*/
+
+/*
+document.getElementById("btn-thanhtoan").addEventListener("click", function(event) {
+    event.preventDefault();
+    if (checkValidate()) {
+        document.forms[0].action = "PaymentProcessingServlet";
+        document.forms[0].submit();
+    }
+});
+*/

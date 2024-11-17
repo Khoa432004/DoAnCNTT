@@ -58,4 +58,13 @@ public class PaymentDAO {
             }
         }
     }
+
+
+	public boolean exists(int maHoaDon) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	
 }

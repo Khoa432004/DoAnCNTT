@@ -106,7 +106,9 @@
                                 </div>
 
                                 <div class="card-footer ">
-                                    <button style="width: 100%;" class="btn btn-success ">Nhận ngay</button>
+                                  <%--  <button style="width: 100%;" class="btn btn-success ">Nhận ngay</button> --%>
+                                    <button style="width: 100%;" class="btn btn-uudaidacbiet id="btn-uudaidacbiet" 
+                                    onclick="addUuDai('VIP20', '<%= session.getAttribute("Username") != null ? session.getAttribute("Username") : "" %>')">Nhận ngay</button>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +125,10 @@
                                 </div>
 
                                 <div class="card-footer ">
-                                    <button style="width: 100%;" class="btn btn-success ">Nhận ngay</button>
+                                  <%--   <button style="width: 100%;" class="btn btn-success ">Nhận ngay</button> --%>
+                                  <button style="width: 100%;" class="btn btn-agodavip id="btn-agodavip" 
+                                  onclick="addUuDai('AGODAVIP15', '<%= session.getAttribute("Username") != null ? session.getAttribute("Username") : "" %>')">Nhận ngay</button>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -136,12 +141,14 @@
                                 </div>
                                 <div class="card-body">
                                     <p>Ưu đãi Quốc tế</p>
-                                    <p style="font-size: 12px;">Giảm tới 30% giá khách sạn Quốc tế, giữ phòng trong 7
-                                        ngày!</p>
+                                    <p style="font-size: 12px;">Giảm tới 30% giá khách sạn Quốc tế, giữ phòng trong 7 ngày!</p>  
+                                       
                                 </div>
 
                                 <div class="card-footer ">
-                                    <button style="width: 100%;" class="btn btn-success ">Nhận ngay</button>
+                                   <%--  <button style="width: 100%;" class="btn btn-success ">Nhận ngay</button> --%>
+                                    <button style="width: 100%;" class="btn btn-uudaiquocte id="btn-uudaiquocte"
+									onclick="addUuDai('INT200K', '<%= session.getAttribute("Username") != null ? session.getAttribute("Username") : "" %>')">Nhận ngay</button>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +169,9 @@
                                 </div>
 
                                 <div class="card-footer ">
-                                    <button style="width: 100%;" class="btn btn-success ">Nhận ngay</button>
+                                   <%--  <button style="width: 100%;" class="btn btn-success ">Nhận ngay</button>--%>
+                                    <button style="width: 100%;" class="btn btn-uudaitrongnuoc id="btn-uudaitrongnuoc" 
+                                    onclick="addUuDai('DOM100K', '<%= session.getAttribute("Username") != null ? session.getAttribute("Username") : "" %>')">Nhận ngay</button>
                                 </div>
                             </div>
                         </div>
@@ -178,7 +187,9 @@
                                 </div>
 
                                 <div class="card-footer ">
-                                    <button style="width: 100%;" class="btn btn-success    ">Nhận ngay</button>
+                                   <%--  <button style="width: 100%;" class="btn btn-success  ">Nhận ngay</button> --%>
+                                   <button style="width: 100%;" class="btn btn-giam500k id="btn-giam500k" 
+									onclick="addUuDai('500KDISCOUNT', '<%= session.getAttribute("Username") != null ? session.getAttribute("Username") : "" %>')">Nhận ngay</button> 
                                 </div>
                             </div>
                         </div>
@@ -195,7 +206,9 @@
                                 </div>
 
                                 <div class="card-footer ">
-                                    <button style="width: 100%;" class="btn btn-success ">Nhận ngay</button>
+                                <%--  <button style="width: 100%;" class="btn btn-success ">Nhận ngay</button> --%>  
+                                     <button style="width: 100%;" class="btn btn-giam700k id="btn-giam700k" 
+								onclick="addUuDai('700KDISCOUNT', '<%= session.getAttribute("Username") != null ? session.getAttribute("Username") : "" %>')">Nhận ngay</button> 
                                 </div>
                             </div>
                         </div>
@@ -284,6 +297,10 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
     <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
-</body>
+    
+    <!-- Liên kết file JavaScript event.js -->
+    <script src="assets/javaScript/uudai.js"></script>
+	
+
 
 </html>
